@@ -1,91 +1,136 @@
 <!DOCTYPE html>
 
 <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=PT+Serif+Caption:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 
 
 <body>
     <!-- Task Bar (Start) -->
-    <div id="task-bar">
+    <section id="task-bar">
         <div id="logo">
-            <img src="res/logo.png">
+            <a href="https://www.thepioneerwoman.com/just-for-fun/a44948992/cat-puns/" target="_blank"><img src="res/logo/logo without tagline.png"></a>
         </div>
         <div id="task-button-bar">
-            <button id="taskbar-buttons">HOME</button>
-            <button id="taskbar-buttons">ABOUT US</button>
-            <button id="taskbar-buttons">PRODUCTS</button>
-            <button id="taskbar-buttons">SERVICES</button>
-            <button id="taskbar-buttons">JOBS</button>
-            <button id="taskbar-buttons">CONTACTS</button>
+            <a href="#task-bar"><button id="taskbar-buttons">HOME<span></span><span></span><span></span><span></span></button></a>
+            <a href="#intro-section"><button id="taskbar-buttons">ABOUT US<span></span><span></span><span></span><span></span></button></a>
+            <a href="#services"><button id="taskbar-buttons">SERVICES<span></span><span></span><span></span><span></span></button></a>
+            <a href="#contact-us"><button id="taskbar-buttons">CONTACTS<span></span><span></span><span></span><span></span></button></a>
         </div>
-    </div>
+    </section>
     <!-- Task Bar (End) -->
 
     <!-- Intro Section (Start) -->
-    <div id="intro-section">
+    <section id="intro-section">
         <div id="intro-background">
             <span>TELES TECH</span>
         </div>
         <div id="intro-subtext">
-            <span>What we promise, we shall accomplish</span>
+            <span>What we promise, we shall accomplish.</span>
         </div>
-    </div>
+    </section>
     <!-- Intro Section (End) -->
 
     <!-- Services (Start) -->
-    <div id="services">
+    <section id="services">
         <h1><span>OUR SERVICES</span></h1>
         <div id="services-holder">
             <div class="item">
                 <div class="pic-holder">
-                    <img src="res/Teles.jpg">
+                    <img src="res/Cross_platform_d1.svg">
                 </div>
                 <div id="services-desc">
-                    <span>Your Article Title Goes Here</span>
+                    <span>Cross Platform Development</span>
                     <br>
                     <br>
-                    <span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span>
+                    <span><p>We create high-performance apps for iOS, Android, 
+                        and web using a single codebase. Maximize reach, reduce costs, 
+                        and ensure a seamless user experience across all platforms.</p></span>
+                    <!-- <span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span> -->
                 </div>
-                <div>
+                <!-- <div>
                     <button class="generic-button">Add a Call-to-Action</button>
-                </div>
+                </div> -->
             </div>
             <div class="item">
                 <div class="pic-holder">
-                    <img src="res/Teles.jpg">
+                    <img src="res/Web_application_d1.svg">
                 </div>
                 <div id="services-desc">
-                    <span>Your Article Title Goes Here</span>
+                    <span>Web Application</span>
                     <br>
                     <br>
-                    <span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span>
+                    <span><p>We build scalable, high-performance web applications with advanced features and robust security. 
+                        Our custom solutions deliver seamless user experiences and drive business success.</p></span>
+                    <!-- <span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span> -->
                 </div>
-                <div>
+                <!-- <div>
                     <button class="generic-button">Add a Call-to-Action</button>
+                </div> -->
+            </div>
+        
+            <div class="item">
+                <div class="pic-holder">
+                    <img src="res/AI_d1.svg">
                 </div>
+                <div id="services-desc">
+                    <span>AI/ML Development</span>
+                    <br>
+                    <br>
+                    <span><p>Harness the power of AI and Machine Learning with our custom solutions. 
+                        We build intelligent systems that automate processes, enhance decision-making, 
+                        and drive innovation for your business.</p></span>
+                    <!-- <span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span> -->
+                </div>
+                <!-- <div>
+                    <button class="generic-button">Add a Call-to-Action</button>
+                </div> -->
             </div>
             <div class="item">
                 <div class="pic-holder">
-                    <img src="res/Teles.jpg">
+                    <img src="res/website_d1.svg">
                 </div>
                 <div id="services-desc">
-                    <span>Your Article Title Goes Here</span>
+                    <span>Website Development</span>
                     <br>
                     <br>
-                    <span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span>
+                    <span><p>We create responsive, custom websites that 
+                        enhance your brand's online presence. 
+                        Our solutions are secure, fast, and optimized for all devices, driving business growth.</p></span>
+                    <!-- <span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span> -->
                 </div>
-                <div>
+                <!-- <div>
                     <button class="generic-button">Add a Call-to-Action</button>
+                </div> -->
+            </div>
+            <div class="item">
+                <div class="pic-holder">
+                    <img src="res/App_d1.svg">
                 </div>
+                <div id="services-desc">
+                    <span>App Development</span>
+                    <br>
+                    <br>
+                    <span><p>We craft intuitive, high-performance mobile apps tailored to your needs. 
+                        From concept to launch, our team delivers seamless, 
+                        feature-rich applications for both iOS and Android platforms.</p></span>
+                    <!-- <span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span> -->
+                </div>
+                <!-- <div>
+                    <button class="generic-button">Add a Call-to-Action</button>
+                </div> -->
             </div>
         </div>
-    </div>
+    </section>
     <!-- Serverices (End) -->
 
     <!-- Opportunities (Start) -->
-    <div id="opportunities">
+    <!-- <section id="opportunities">
         <h1><span>OPPORTUNITIES</span></h1>
         <div id="opportunities-holder">
             <div class="item">
@@ -159,26 +204,31 @@
                 </div>
             </div>
         </div>
-     </div>
+     </section> -->
     <!-- Opportunities (End) -->
 
 
     <!-- Contact Us (Start) -->
-    <div id="contact-us">
+    <section id="contact-us">
         <div id="contact-info">
             <h2>Contact Us</h2>
-            <span>1 2 ka 4, 4 2 ka 1</span>
+            <span>Director, <br>
+                Teles Technological Services LLP</span>
             <br>
-            <span class="bold">BUSINESS HOURS</span>
+            <span class="bold"><a href="mailto: contact@telestech.com" style="text-decoration: underline;">contact@telestech.com</a></span>
             <br><br><br><br><br><br><br><br>
             <div id="loc-holder">
                 <img src="res/location_icon.svg">
             </div>
-            <span> Address</span>
+            <span>TELES TECHNOLOGICAL SERVICES LLP <br>
+                A/303, Maruti Apartment, <br>
+                Mithagar Road, <br>
+                Mulund (West) <br>
+                Mumbai - 400080.</span>
         </div>
         <div class="pic-holder" id="contact-image">
             <img src="res/Teles.jpg">
         </div>
-    </div>
+    </section>
     <!-- Contact Us (End) --> 
 </body>
