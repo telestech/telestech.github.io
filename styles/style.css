@@ -6,10 +6,10 @@ body {
     --c: #2c251f;
     max-width: 100%;
     color: #2c251f;
-    background-color: #efc577a7;
+    /* background-color: #efc577a7; */
     /* background-color: #ffea0356; */
-    background-image:linear-gradient(rgba(255, 255, 255, 0.565), rgba(255, 170, 0, 0.274)), url("../res/Teles.jpg");
-    /* background-image:linear-gradient(rgba(250, 250, 250, 0.616), rgba(0, 0, 0, 0.274)), url("../res/Teles.jpg"); */
+    /* background-image:linear-gradient(rgba(255, 255, 255, 0.565), rgba(255, 170, 0, 0.274)), url("../res/Teles.jpg"); */
+    background-image:linear-gradient(rgba(255, 255, 255, 0.712), rgba(255, 170, 0, 0)), url("../res/background_d3.svg");
     background-size: cover;
     background-repeat:repeat-y;
     background-attachment: fixed;
