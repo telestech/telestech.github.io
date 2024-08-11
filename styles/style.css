@@ -449,7 +449,8 @@ a:visited {
 
     body {
         overflow-x: hidden;
-        background-attachment: fixed;
+        background-attachment: scroll;
+        background-image:linear-gradient(rgba(237, 232, 232, 0.897), rgb(217, 216, 213)), url("../res/background_d4.svg");
     }
 
     #intro-subtext span{
