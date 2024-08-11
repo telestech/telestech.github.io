@@ -203,7 +203,7 @@ a:visited {
     animation-iteration-count: infinite;
 }
 
-#services-holder .item:hover {
+#services-holder .item:hover, #services-holder .item:active {
     box-shadow: 0 0 10px 10px black;
 }
 
@@ -371,12 +371,12 @@ a:visited {
     display: inline-block;
 }
 
-#about-leaders .item:hover .box1 {
+#about-leaders .item:hover .box1, #about-leaders .item:active .box1 {
     max-height: 0;
     opacity: 0;
 }
 
-#about-leaders .item:hover .box2 {
+#about-leaders .item:hover .box2, #about-leaders .item:active .box2 {
     max-height: 300px;
     opacity: 1;
 }
