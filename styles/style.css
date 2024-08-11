@@ -10,6 +10,9 @@ body {
     /* background-color: #ffea0356; */
     /* background-image:linear-gradient(rgba(255, 255, 255, 0.565), rgba(255, 170, 0, 0.274)), url("../res/Teles.jpg"); */
     background-image:linear-gradient(rgba(255, 255, 255, 0.712), rgba(255, 170, 0, 0)), url("../res/background_d4.svg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-repeat:repeat-y;
     background-attachment: fixed;
@@ -481,10 +484,13 @@ a:visited {
         width: 100%;
     }
 
+    #about-leaders .item .box1 {
+        border-radius: 0;
+    }
+
     #about-leaders .item .box1, #about-leaders .item .box2 {
         width: 100%;
         /* height: 100%; */
-        border: 1px solid red;
     }
 }
 
