@@ -1,6 +1,13 @@
+:root {
+    --foreground-color: #fff9eea2;
+    --background-color: 
+}
+
 html {
     scroll-behavior:smooth;
   }
+
+
 
 body {
     --c: #2c251f;
@@ -9,7 +16,7 @@ body {
     /* background-color: #efc577a7; */
     /* background-color: #ffffff; */
     /* background-image:linear-gradient(rgba(255, 255, 255, 0.565), rgba(255, 170, 0, 0.274)), url("../res/Teles.jpg"); */
-    background-image:linear-gradient(rgba(255, 255, 255, 0.712), rgba(255, 170, 0, 0)), url("../res/background_d4.svg");
+    /* background-image:linear-gradient(rgba(255, 255, 255, 0.712), rgba(255, 170, 0, 0)), url("../res/background_d4.svg"); */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -120,6 +127,7 @@ a:visited {
 }
 
 #intro-section {
+    position: relative;
     background-color: #fff9ee;
     padding: 7% 10%;
     height: fit-content;
@@ -130,6 +138,9 @@ a:visited {
 }
 
 #intro-subtext{
+    position: absolute;
+    bottom: 20%;
+    /* left: 0; */
     margin-top: 1em; 
     text-align: center;
     max-width: 100%;
@@ -138,27 +149,65 @@ a:visited {
 
 #intro-subtext span {
     display: inline-block;
-    font-family: 'PT Serif Caption';
     font-size: 2vw;
     /* font-weight: lighter; */
 }
 
 #intro-background {
-    line-height:50vh; /* To center text */
+    /* line-height:50vh; To center text */
     text-align: center;
-    height: 50vh;
-    width: 100vw;
+    /* height: 50vh; */
+    /* width: 100vw; */
     max-width: 100%;
     max-height: 100%;
-    font-size: 2vw;
 }
 
 #intro-background span {
-    font-size: 11vw;
-    max-width: 100%;
+    font-family: 'PT Serif Caption';
+    font-size: 2vw;
+    display: inline-block;
+    /* font-size: 11vw; */
+    /* max-width: 100%; */
     color: #2c251f;
 }
 
+
+#q-table {
+    background-color: #fff9eea2;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#q-table table {
+    padding: 1% 1% 2% 1%;
+    color: white ;
+    background-color: rgba(128, 128, 128, 0.562);
+}
+
+#q-table table caption {
+    color: black;
+}
+
+#q-table table tr, td, th {
+    width: fit-content;
+    height: fit-content;
+}
+
+#q-table table thead tr th{
+    padding: 0 3em;
+}
+
+#q-table table tbody tr td {
+    border-left: 2px solid black;
+
+}
+
+#q-table table tbody tr td:nth-child(1) {
+    border: none;
+    padding-right: 1em;
+    padding-bottom: 5px;
+}
 
 #services {
     display: flex;
@@ -436,6 +485,14 @@ a:visited {
 }
 
 
+.green-text {
+    color: rgb(5, 255, 5);
+}
+
+.red-text {
+    color: red;
+}
+
 /* Alignments */
 
 
@@ -446,6 +503,10 @@ a:visited {
         overflow-x: hidden;
         background-attachment: scroll;
         background-image:linear-gradient(rgba(237, 232, 232, 0.897), rgb(217, 216, 213)), url("../res/background_d4.svg");
+    }
+
+    #intro-background span {
+        font-size: 5vw;
     }
 
     #intro-subtext span{
