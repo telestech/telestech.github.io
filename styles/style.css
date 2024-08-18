@@ -1,7 +1,18 @@
 :root {
-    --foreground-color: #fff9eea2;
-    --background-color: 
+    --card-bg: #fff9eea2;
+    --text-color: #2c251f;     
+    --text-alt-color: white;
+    --foreground-color: #2c251f;
+    --bg-color: white;     
 }
+
+/* :root {
+    --card-bg: #484343a2;
+    --text-color: #ffffff;     
+    --text-alt-color: black;
+    --foreground-color: #00eeff;
+    --bg-color: rgb(0, 0, 0);     
+} */
 
 html {
     scroll-behavior:smooth;
@@ -10,11 +21,10 @@ html {
 
 
 body {
-    --c: #2c251f;
     max-width: 100%;
-    color: #2c251f;
+    color: var(--text-color);
     /* background-color: #efc577a7; */
-    /* background-color: #ffffff; */
+    background-color: var(--bg-color);
     /* background-image:linear-gradient(rgba(255, 255, 255, 0.565), rgba(255, 170, 0, 0.274)), url("../res/Teles.jpg"); */
     /* background-image:linear-gradient(rgba(255, 255, 255, 0.712), rgba(255, 170, 0, 0)), url("../res/background_d4.svg"); */
     -webkit-background-size: cover;
@@ -67,10 +77,10 @@ a:visited {
 }
 
 #taskbar-buttons {
-    color: #2c251f;
+    color: var(--text-color);
     font-size:small;
     font-weight: bolder;
-    border: 0.3em solid var(--c);
+    border: 0.3em solid var(--foreground-color);
     border-radius: 0.5em;
     min-width: fit-content;
     min-height: 3em;
@@ -90,7 +100,7 @@ a:visited {
     position: absolute;
     width: 25%;
     height: 100%;
-    background-color: var(--c);
+    background-color: var(--foreground-color);
     transform: translateY(150%);
     border-radius: 50%;
     left: calc((var(--n) - 1) * 25%);
@@ -100,7 +110,7 @@ a:visited {
 }
 
 #taskbar-buttons:hover {
-    color: white;
+    color: var(--text-alt-color);
 }
 
 #taskbar-buttons:hover span {
@@ -128,19 +138,18 @@ a:visited {
 
 #intro-section {
     position: relative;
-    background-color: #fff9ee;
+    /* background-color: #fff9ee; */
     padding: 7% 10%;
     height: fit-content;
     margin: 0 5%;
     height: 50vh;
     border-radius: 4%;
-    background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0));
+    /* background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)); */
 }
 
 #intro-subtext{
     position: absolute;
     bottom: 20%;
-    /* left: 0; */
     margin-top: 1em; 
     text-align: center;
     max-width: 100%;
@@ -150,14 +159,10 @@ a:visited {
 #intro-subtext span {
     display: inline-block;
     font-size: 2vw;
-    /* font-weight: lighter; */
 }
 
 #intro-background {
-    /* line-height:50vh; To center text */
     text-align: center;
-    /* height: 50vh; */
-    /* width: 100vw; */
     max-width: 100%;
     max-height: 100%;
 }
@@ -166,14 +171,12 @@ a:visited {
     font-family: 'PT Serif Caption';
     font-size: 2vw;
     display: inline-block;
-    /* font-size: 11vw; */
-    /* max-width: 100%; */
-    color: #2c251f;
+    color: var(--text-color);
 }
 
 
 #q-table {
-    background-color: #fff9eea2;
+    background-color: var(--card-bg);
     display: flex;
     justify-content: center;
     text-align: center;
@@ -181,8 +184,7 @@ a:visited {
 
 #q-table table {
     padding: 1% 1% 2% 1%;
-    color: white ;
-    background-color: rgba(128, 128, 128, 0.562);
+    color: var(--text-color) ;
 }
 
 #q-table table caption {
@@ -215,7 +217,7 @@ a:visited {
     flex: 1;
     margin: 5% 0 0 0;
     padding: 3% 0 3% 0;
-    background-color: #fff9eea2;
+    background-color: var(--card-bg);
     min-height: fit-content;
 }
 
@@ -284,7 +286,7 @@ a:visited {
 #services-desc span p {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: justify;
-    color: black;
+    color: var(--text-color);
 }
 
 #opportunities {
@@ -295,7 +297,7 @@ a:visited {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #fff9ee8b;
+    background-color: var(--card-bg);
     padding: 3% 0;
 }
 
@@ -316,7 +318,7 @@ a:visited {
 }
 
 #opportunities-holder .item {
-    background-color: #bdab8c;
+    background-color: var(--card-bg);
     margin: 5px 1%;
     padding: 1em 1em;
     border-radius: 10%/5%;
@@ -340,7 +342,7 @@ a:visited {
 #about-us {
     display: grid;
     grid-template-rows: 40% 60%;
-    background-color: #fff9ee8b;
+    background-color: var(--card-bg);
     margin: 5% 0 0 0;
     padding: 5% 0;
 }
@@ -382,18 +384,16 @@ a:visited {
     max-height: 300px;
     opacity: 1;
     transition: all ease-in-out 0.4s;
-    border: 1px solid red;
 }
 
 #about-leaders .item .box1 {
     display: block;
-    border: 1px solid rebeccapurple;
 }
 
 #about-leaders .item .box2 {
     display: grid;
-    background-color: #2c251f;
-    color: white;
+    background-color: var(--card-bg);
+    color: var(--text-color);
     grid-template-rows: 20% 80%;
     max-height: 0;
     opacity: 0;
@@ -428,7 +428,7 @@ a:visited {
 #contact-us {
     display: grid;
     grid-template-columns: 50% 50%;
-    background-color: #fff9ee8b;
+    background-color: var(--card-bg);
     margin: 5% 0 0 0;
 }
 
@@ -492,6 +492,19 @@ a:visited {
 .red-text {
     color: red;
 }
+
+.neonText {
+    /* color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa; */
+  }
 
 /* Alignments */
 

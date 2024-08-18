@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=PT+Serif+Caption:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 
 
@@ -17,10 +18,11 @@
             <a href="https://www.thepioneerwoman.com/just-for-fun/a44948992/cat-puns/" target="_blank"><img src="res/logo/logo without tagline.png"></a>
         </div>
         <div id="task-button-bar">
-            <a href="#task-bar"><button id="taskbar-buttons">HOME<span></span><span></span><span></span><span></span></button></a>
-            <a href="#services"><button id="taskbar-buttons">SERVICES<span></span><span></span><span></span><span></span></button></a>
-            <a href="#about-us"><button id="taskbar-buttons">ABOUT US<span></span><span></span><span></span><span></span></button></a>
-            <a href="#contact-us"><button id="taskbar-buttons">CONTACTS<span></span><span></span><span></span><span></span></button></a>
+            <a href="#task-bar"><button id="taskbar-buttons" onclick="doStuff()" class="neonText">HOME<span></span><span></span><span></span><span></span></button></a>
+            <a href="#services"><button id="taskbar-buttons" class="neonText">SERVICES<span></span><span></span><span></span><span></span></button></a>
+            <a href="#about-us"><button id="taskbar-buttons" class="neonText">ABOUT US<span></span><span></span><span></span><span></span></button></a>
+            <a href="#contact-us"><button id="taskbar-buttons" class="neonText">CONTACTS<span></span><span></span><span></span><span></span></button></a>
+            <a href="#" onclick="setTheme()"><button id="taskbar-buttons" class="neonText">Theme<span></span><span></span><span></span><span></span></button></a>
         </div>
     </section>
     <!-- Task Bar (End) -->
