@@ -16,7 +16,28 @@ light_theme = {
     "--bg-color" : "white"     
 }
 
+async function changeBackground() {
+    var st = document.getElementById("placeholder").style
+    if (isDark) {
+        st.transition = "ease-in-out 0.5s"
+        st.backgroundColor = "black"
+        st.height = "100vh"
+        st.width = "100vw"
+        st.transform = "scale3d(100, 100, 100)"
+        await new Promise(r => setTimeout(r, 2000));
+        document.body.style.backgroundImage = "url(../res/background-d6-dark.jpg)"
+        st.transform = "scale3d(0, 0, 0)"
+    }
+}
+
 function setTheme() {
+    
+    if(isDark) {
+        changeBackground()
+    } else {
+        document.body.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.712), rgba(255, 170, 0, 0)), url(../res/background_d4.svg)"
+    }
+
     theme = (isDark)? dark_theme : light_theme;
     var keys = Object.keys(theme);
     console.log(theme.size)

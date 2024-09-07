@@ -1,0 +1,146 @@
+@import url("./style.css");
+
+
+#intro-card {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    background-image: url("../res/backgrounds/background_d1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#intro-card .container {
+    color: var(--text-alt-color);
+    height: fit-content;
+    width: 100%;
+    background: none;
+    text-align: center;
+}
+
+
+#services {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#services .title > h1{
+    font-size: 3vw;
+}
+
+#service-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+#service-item {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+
+#service-desc .title {
+    font-size: 1.5vw;
+    padding: 1em 0.5em;
+}
+
+#service-desc .text-body {
+    padding: 1em 0.5em;
+}
+
+
+#contact-us {
+    height: 50vh;
+    padding: 2em 0 2em 0;
+}
+
+#contact-us .container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#contact-desc {
+    padding: 0 0 0 2em;
+    display: grid;
+    grid-template-rows: 0.4fr 1fr;
+}
+
+#contact-desc div:nth-child(1) {
+    font-size: 3vw;
+    padding: 1em 0.5em 0.5em 0.4em;
+}
+
+#contact-desc div:nth-child(2) {
+    font-size: 1vw;
+    padding: 0.5em 5em 0.5em 1em;
+}
+
+#contact-form {
+    font-size: 0.8vw;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+}
+
+#contact-form input[type=text] {
+    border: 1px solid black;
+    border-radius: 15px/20px;
+    height: 2em;
+    padding-left: 1em;
+}
+
+#contact-name {
+    display: flex;
+    flex-direction: row;
+}
+
+#contact-name > div {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1em;
+    padding-bottom: 2em;
+}
+
+#contact-email {
+    display: flex;
+    flex-direction: column;
+    padding-right: 50%;
+    padding-bottom: 3em;
+}
+
+#contact-message {
+    display: flex;
+    flex-direction: column;
+    padding-right: 40%;
+    padding-bottom: 2em;
+}
+
+#contact-message > textarea{
+    height: 5em;
+    border-radius: 15px/20px;
+    border: 1px solid black;
+    padding: 1em 0 0 1em;
+}
+
+#contact-btn input {
+    text-align: center;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 30%/40%;
+    background-color: var(--background-alt-color);
+    color: var(--text-alt-color);
+    height: 4em;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    #contact-form {
+        display: flex;
+        flex-direction: row;
+    }
+}

@@ -2,342 +2,186 @@
 
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=PT+Serif+Caption:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
     <script type="text/javascript" src="js/index.js"></script>
 </head>
 
 
-
 <body>
-    <!-- Task Bar (Start) -->
-    <section id="task-bar">
-        <div id="logo">
-            <a href="https://www.thepioneerwoman.com/just-for-fun/a44948992/cat-puns/" target="_blank"><img src="res/logo/logo without tagline.png"></a>
-        </div>
-        <div id="task-button-bar">
-            <a href="#task-bar"><button id="taskbar-buttons" onclick="doStuff()" class="neonText">HOME<span></span><span></span><span></span><span></span></button></a>
-            <a href="#services"><button id="taskbar-buttons" class="neonText">SERVICES<span></span><span></span><span></span><span></span></button></a>
-            <a href="#about-us"><button id="taskbar-buttons" class="neonText">ABOUT US<span></span><span></span><span></span><span></span></button></a>
-            <a href="#contact-us"><button id="taskbar-buttons" class="neonText">CONTACTS<span></span><span></span><span></span><span></span></button></a>
-            <a href="#" onclick="setTheme()"><button id="taskbar-buttons" class="neonText">Theme<span></span><span></span><span></span><span></span></button></a>
-        </div>
-    </section>
-    <!-- Task Bar (End) -->
 
-    <!-- Intro Section (Start) -->
-    <section id="intro-section">
-        <div id="intro-background">
-            <span>Custom Website, Software, and ML/AI Algorithm development
-                alongside dedicated teams for your Unique Business Needs</span>
+    <section id="nav-bar">
+        <div class="image-holder">
+            <img src="./res/logo/logo without tagline.png">
         </div>
-        <div id="intro-subtext">
-            <span>Our development teams are committed to helping you succeed in 
-                your endeavors!
-            </span>
+        <div id="nav-bar-buttons">
+            <div class="item">
+                <button>Home</button>
+            </div>
+            <div class="item">
+                <button>About</button>
+            </div>
+            <div class="item">
+                <button>Services</button>
+            </div>
+            <div class="item">
+                <button>Contact</button>
+            </div>
         </div>
     </section>
-    <!-- Intro Section (End) -->
 
-
-    <!-- Quality Table (Start) -->
-    <section id="q-table">
-        <table>
-            <caption>What makes us different?</caption>
-            <thead>
-                <tr>
-                    <th> </th>
-                    <th>Hiring Locally</th>
-                    <th>Outsourcing</th>
-                    <th>Teles Tech</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Top Engineers</td>
-                    <td class="green-text">&#x2713</td>
-                    <td class="red-text">&#x2717</td>
-                    <td class="green-text">&#x2713</td>
-                </tr>
-                <tr>
-                    <td>Your own team</td>
-                    <td class="green-text">&#x2713</td>
-                    <td class="red-text">&#x2717</td>
-                    <td class="green-text">&#x2713</td>
-                </tr>
-                <tr>
-                    <td>Fast to work</td>
-                    <td class="red-text">&#x2717</td>
-                    <td class="green-text">&#x2713</td>
-                    <td class="green-text">&#x2713</td>
-                </tr>
-                <tr>
-                    <td>Scalable at speed</td>
-                    <td class="red-text">&#x2717</td>
-                    <td class="green-text">&#x2713</td>
-                    <td class="green-text">&#x2713</td>
-                </tr>
-                <tr>
-                    <td>Value for money</td>
-                    <td class="red-text">&#x2717</td>
-                    <td class="green-text">&#x2713</td>
-                    <td class="green-text">&#x2713</td>
-                </tr>
-                <tr>
-                    <td>IP Protection</td>
-                    <td class="green-text">&#x2713</td>
-                    <td class="red-text">&#x2717</td>
-                    <td class="green-text">&#x2713</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    <!-- Quality Table (End) -->
-
+    <div>
+        <section id="intro-card">
+            <div class="container">
+                <h1>Empower your business with innovation and efficiency through us!</h1>
+            </div>
+        </section>
     
-    <!-- Services (Start) -->
-    <section id="services">
-        <h1><span>OUR SERVICES</span></h1>
-        <div id="services-holder">
-            <div class="item">
-                <div class="pic-holder">
-                    <img src="res/Cross_platform_d1.svg">
+        <section id="services">
+            <div class="container">
+                <div class="title">
+                    <h1>Our Services</h1>
                 </div>
-                <div id="services-desc">
-                    <span>Cross Platform Development</span>
-                    <br>
-                    <br>
-                    <span><p>We create high-performance apps for iOS, Android, 
-                        and web using a single codebase. Maximize reach, reduce costs, 
-                        and ensure a seamless user experience across all platforms.</p></span>
-                    <!-- <span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span> -->
+                <div id="service-holder">
+                    <div id="service-item" class="grid-forward">
+                        <div class="image-holder">
+                            <!-- Add item image here -->
+                        </div>
+                        <div id="service-desc">
+                            <div class="title">
+                                Software Development
+                            </div>
+                            <div class="text-body">
+                                <span>Custom software development at Teles Technological Services LLP focuses on creating tailored software solutions designed to meet the unique needs of each client. 
+                                    This involves developing bespoke applications that align with specific business requirements, ensuring scalability and robustness for enterprise-level use. Additionally, 
+                                    Teles Tech specializes in integrating new software with existing systems to enhance overall functionality and efficiency, providing businesses with tools that are precisely suited to their operational needs.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="service-item" class="grid-reverse">
+                        <div class="image-holder">
+                            <!-- Add item image here -->
+                        </div>
+                        <div id="service-desc">
+                            <div class="title">
+                                Website Development
+                            </div>
+                            <div class="text-body">
+                                <span>Custom website development at Teles Technological Services LLP involves creating responsive, 
+                                    user-friendly websites tailored to meet the specific needs of clients. This includes developing e-commerce platforms with secure payment gateways, implementing content management systems (CMS) for easy updates, 
+                                    and ensuring websites function seamlessly across all devices. By focusing on the unique requirements of each business, Teles Tech delivers websites that enhance user engagement and support business growth.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="service-item" class="grid-forward">
+                        <div class="image-holder">
+                            <!-- Add item image here -->
+                        </div>
+                        <div id="service-desc">
+                            <div class="title">
+                                AI/ML Development
+                            </div>
+                            <div class="text-body">
+                                <span>Teles Technological Services LLP specializes in developing custom AI and machine learning algorithms tailored to address specific business challenges. 
+                                    By leveraging advanced AI and ML techniques, the company creates algorithms that enhance decision-making, automate processes, and provide actionable insights. 
+                                    These custom solutions are designed to integrate seamlessly with existing systems, enabling businesses to harness the power of AI and ML for improved efficiency and innovation.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="service-item" class="grid-reverse">
+                        <div class="image-holder">
+                            <!-- Add item image here -->
+                        </div>
+                        <div id="service-desc">
+                            <div class="title">
+                                Application Development
+                            </div>
+                            <div class="text-body">
+                                <span>At Teles Technological Services LLP, custom app development encompasses creating mobile, web, and desktop applications tailored to meet the unique needs of clients. 
+                                    Whether developing mobile apps for iOS and Android platforms or web-based applications accessible from any browser, Teles Tech ensures that each app is designed for optimal performance and user experience. 
+                                    The company also develops desktop applications for various operating systems, providing comprehensive solutions to enhance business operations and user engagement.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- <div>
-                    <button class="generic-button">Add a Call-to-Action</button>
-                </div> -->
             </div>
-            <div class="item">
-                <div class="pic-holder">
-                    <img src="res/Web_application_d1.svg">
+        </section>
+    
+        <section id="contact-us">
+            <div class="container">
+                <div id="contact-desc">
+                    <div>
+                        Contact Us
+                    </div>
+                    <div>
+                        Interested in working together? Fill out some info and we will be in touch shortly. <br>
+                        We can't wait to hear from you!
+                    </div>
                 </div>
-                <div id="services-desc">
-                    <span>Web Application</span>
-                    <br>
-                    <br>
-                    <span><p>We build scalable, high-performance web applications with advanced features and robust security. 
-                        Our custom solutions deliver seamless user experiences and drive business success.</p></span>
-                    <!-- <span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span> -->
+                <div>
+                    <form id="contact-form">
+                        <label>Name</label> <br>
+                        <div id="contact-name">
+                            <div>
+                                <label for="first_name">First Name:</label>
+                                <input type="text" name="first_name" id="first_name" required />
+                            </div>
+                            <div>
+                                <label for="last_name">Last Name:</label>
+                                <input type="text" name="last_name" id="last_name" required />
+                            </div>
+                        </div>
+                        <div id="contact-email">
+                            <label for="email">Email:</label>
+                            <input type="text" name="email" id="email" required />
+                        </div>
+                        <div id="contact-message">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message"></textarea>
+                        </div>
+                        <div id="contact-btn">
+                            <input type="submit" value="Send" />
+                        </div>
+                    </form>
                 </div>
-                <!-- <div>
-                    <button class="generic-button">Add a Call-to-Action</button>
-                </div> -->
             </div>
-        
-            <div class="item">
-                <div class="pic-holder">
-                    <img src="res/AI_d1.svg">
-                </div>
-                <div id="services-desc">
-                    <span>AI/ML Development</span>
-                    <br>
-                    <br>
-                    <span><p>Harness the power of AI and Machine Learning with our custom solutions. 
-                        We build intelligent systems that automate processes, enhance decision-making, 
-                        and drive innovation for your business.</p></span>
-                    <!-- <span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span> -->
-                </div>
-                <!-- <div>
-                    <button class="generic-button">Add a Call-to-Action</button>
-                </div> -->
-            </div>
-            <div class="item">
-                <div class="pic-holder">
-                    <img src="res/website_d1.svg">
-                </div>
-                <div id="services-desc">
-                    <span>Website Development</span>
-                    <br>
-                    <br>
-                    <span><p>We create responsive, custom websites that 
-                        enhance your brand's online presence. 
-                        Our solutions are secure, fast, and optimized for all devices, driving business growth.</p></span>
-                    <!-- <span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span> -->
-                </div>
-                <!-- <div>
-                    <button class="generic-button">Add a Call-to-Action</button>
-                </div> -->
-            </div>
-            <div class="item">
-                <div class="pic-holder">
-                    <img src="res/App_d1.svg">
-                </div>
-                <div id="services-desc">
-                    <span>App Development</span>
-                    <br>
-                    <br>
-                    <span><p>We craft intuitive, high-performance mobile apps tailored to your needs. 
-                        From concept to launch, our team delivers seamless, 
-                        feature-rich applications for both iOS and Android platforms.</p></span>
-                    <!-- <span><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span> -->
-                </div>
-                <!-- <div>
-                    <button class="generic-button">Add a Call-to-Action</button>
-                </div> -->
-            </div>
-        </div>
-    </section>
-    <!-- Serverices (End) -->
+        </section> 
+    </div>
 
-    <!-- Opportunities (Start) -->
-    <!-- <section id="opportunities">
-        <h1><span>OPPORTUNITIES</span></h1>
-        <div id="opportunities-holder">
-            <div class="item">
-                <h5>Heading</h5>
-                <h6>Sub Heading</h6>
-                <ul>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                </ul>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-title">
                 <div>
-                    <button class="generic-button">Add a Call-to-Action</button>
+                    <span>Teles Technological Services LLP</span>
+                </div>
+                <div class="socials">
+                    <!--Linkedin-->
+                    <!--Instagram-->
                 </div>
             </div>
-            <div class="item">
-                <h5>Heading</h5>
-                <h6>Sub Heading</h6>
-                <ul>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                </ul>
-                <div>
-                    <button class="generic-button">Add a Call-to-Action</button>
+            <div>
+                <div class="footer-item">
+                    <div>
+                        Location
+                    </div>
+                    <ul>
+                        <li>India</li>
+                        <li>Australia</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="item">
-                <h5>Heading</h5>
-                <h6>Sub Heading</h6>
-                <ul>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                </ul>
-                <div>
-                    <button class="generic-button">Add a Call-to-Action</button>
-                </div>
-            </div>
-            <div class="item">
-                <h5>Heading</h5>
-                <h6>Sub Heading</h6>
-                <ul>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                </ul>
-                <div>
-                    <button class="generic-button">Add a Call-to-Action</button>
-                </div>
-            </div>
-            <div class="item">
-                <h5>Heading</h5>
-                <h6>Sub Heading</h6>
-                <ul>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                    <li>Items</li>
-                </ul>
-                <div>
-                    <button class="generic-button">Add a Call-to-Action</button>
+                <div class="footer-item">
+                    <div>
+                        Contact
+                    </div>
+                    <ul>
+                        <li><a href="mailto:contact@telestech.com">contact@telestech.com</a></li>
+                        <li>India: +91 9820330370</li>
+                    </ul>
                 </div>
             </div>
         </div>
-     </section> -->
-    <!-- Opportunities (End) -->
-
-    <section id="about-us">
-        <div>
-            <h2>A trusted partner for taking your business to new heights</h2>
-            <p>If you think I am going to add that much text here, you are delusional. Although, to be honest, I can do that.
-                It's just that it will not look nice on a website, you know. Let me tell you something crazy about websites and me; 
-                I can't make 'em. "How did you make this then, Habba?," you ask. "I didn't", I say. I just copy stuff from multiple places,
-                till one works. Alright, I am getting distracted now, back to fixing this website. Ciao.
-                <br><br>
-                p.s: Find a not-so-big-block of text to put in here instead. You messed up if this is still on the website.
-            </p>
-        </div>
-        <div>
-            <h2>Leadership at Teles Tech</h2>
-            <div id="about-leaders">
-                <div class="item">
-                    <div class="pic-holder box1">
-                        <img src="res/profiles/profile-default.svg">
-                    </div>
-                    <div class="box2">
-                        <span>Name</span>
-                        <p>Something comes here.</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic-holder box1">
-                        <img src="res/profiles/Luci Head Only.svg">
-                    </div>
-                    <div class="box2">
-                        <span>Vinit</span>
-                        <p>Vinit, one of the Partners of Teles Technological Services LLP, holds a Master in IT and a Master in IT Management from the University of Sydney. 
-                            As a skilled data engineer and project manager, he brings a wealth of technical expertise and leadership to the firm. 
-                            Outside of his professional pursuits, Vinit enjoys playing badminton, traveling, and indulging in photography</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic-holder box1">
-                        <img src="res/profiles/profile-default.svg">
-                    </div>
-                    <div class="box2">
-                        <span>Honestly, could be title</span>
-                        <p>You guessed it. Something comes here.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Us (Start) -->
-    <section id="contact-us">
-        <div id="contact-info">
-            <h2>Contact Us</h2>
-            <span>Director, <br>
-                Teles Technological Services LLP</span>
-            <br>
-            <span class="bold"><a href="mailto: contact@telestech.com" style="text-decoration: underline;">contact@telestech.com</a></span>
-            <br><br><br><br><br><br><br><br>
-            <div id="loc-holder">
-                <img src="res/location_icon.svg">
-            </div>
-            <!-- <span>TELES TECHNOLOGICAL SERVICES LLP <br>
-                A/303, Maruti Apartment, <br>
-                Mithagar Road, <br>
-                Mulund (West) <br>
-                Mumbai - 400080.</span> -->
-                <span>TELES TECHNOLOGICAL SERVICES LLP</span>
-        </div>
-        <div class="pic-holder" id="contact-image">
-            <img src="res/Teles.jpg">
-        </div>
-    </section>
-    <!-- Contact Us (End) --> 
-     <!--Have a form which defaults to contact information-->
+    </footer>
 </body>
