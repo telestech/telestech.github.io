@@ -107,3 +107,58 @@ body {}
     background-color: gray;
     color: var(--text-alt-color);
 }
+
+
+@media only screen and (max-width: 768px) {
+
+
+    body {
+        margin: 0;
+        width: 100%;
+    }
+
+    #our-services {
+        padding: 1em 0;
+    }
+
+
+    #our-services > div:nth-child(1) h3 {
+        font-size: 8vw;
+    }
+
+    #our-services > div:nth-child(1) span {
+        font-size: 4vw;
+    }
+
+    #service-item {
+        border-bottom: 1px solid black;
+        padding-bottom: 1em;
+    }
+
+    #service-item > div:nth-child(2) h3  {
+        text-align: center;
+        font-size: 6vw;
+    }
+
+    #service-item > div:nth-child(2) {
+        text-align: center;
+        font-size: 4vw;
+
+    }
+
+    #service-holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #service-item {
+        max-width: 100%;
+    }
+
+    #consultation h3 {
+        font-size: 6vw;
+    }
+}

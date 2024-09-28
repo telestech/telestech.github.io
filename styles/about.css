@@ -80,5 +80,60 @@ body {
     color: var(--text-alt-color);
     height: 4em;
     margin-top: 1em;
+    transition: all ease-in-out 0.5s;
 }
 
+#founder-item button:hover {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border: 1px solid black;
+}
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    #about-us {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    #about-us .image-holder {
+        padding: 0;
+    }
+
+    #us-text {
+        padding: 0 1em 0 1em;
+    }
+
+    
+    #us-text h3 {
+        font-size: 8vw;
+        font-weight: bold;
+    }
+
+    #us-text span  {
+        padding-bottom: 1em;
+    }
+
+    #founders-intro > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #founder-item {
+        max-width: 100%;
+        border: 1px solid black;
+        padding-bottom: 1em;
+    }
+
+    #founder-item > div:nth-child(2) h5 {
+        font-size: 6vw;
+    }
+}
