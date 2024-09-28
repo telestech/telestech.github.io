@@ -1,0 +1,109 @@
+@import url("./style.css");
+
+
+body {}
+
+#our-services {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em;
+}
+
+
+#our-services > div:nth-child(1) {
+    text-align: center;
+}
+
+#our-services > div:nth-child(1) h3 {
+    font-size: 4vw;
+    font-weight: lighter;
+}
+
+#our-services > div:nth-child(1) span {
+    font-size: 1vw;
+    line-height: 1.5;
+}
+
+
+
+#service-holder {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    padding-top: 3em;
+    justify-content: center;
+}
+
+#service-item {
+    max-width: 25vw;
+}
+
+#service-item .image-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+#service-item > div:nth-child(2) h3 {
+    font-weight: lighter;
+    font-size: 1.7vw;
+}
+
+#service-item > div:nth-child(2) {
+    text-align: justify;
+    padding: 1em 0;
+    line-height: 1.5;
+    font-size: 1vw;
+}
+
+#service-item button {
+    text-align: center;
+    padding: 1em 2em;
+    border: 1px solid var(--text-color);
+    border-radius: 500px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 4em;
+    margin-top: 1em;
+    transition: ease-in-out 0.3s;
+}
+
+
+#service-item button:hover {
+    background-color: var(--background-alt-color);
+    color: var(--text-alt-color);
+}
+
+#consultation > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: lighter;
+    height: 40vh;
+    color: var(--text-alt-color);
+}
+
+#consultation h3 {
+    font-size: 3vw;
+    font-weight: lighter;
+}
+
+#consultation button {
+    text-align: center;
+    padding: 0.7em 3.5em;
+    border: 1px solid var(--text-color);
+    border-radius: 500px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 4em;
+    margin-top: 1em;
+    transition: ease-in-out 0.3s;
+}
+
+#consultation button:hover {
+    background-color: gray;
+    color: var(--text-alt-color);
+}

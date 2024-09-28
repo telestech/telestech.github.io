@@ -1,6 +1,7 @@
 @import url("./style.css");
 
 
+
 #intro-card {
     display: flex;
     height: 100vh;
@@ -21,9 +22,13 @@
 
 
 #services {
+    line-height: 1.5;
+    text-align: justify;
     display: flex;
     flex-direction: row;
     align-items: center;
+    background-color: rgba(196, 194, 194, 0.226);
+
 }
 
 #services .title > h1{
@@ -38,8 +43,16 @@
 #service-item {
     display: grid;
     grid-template-columns: 40% 60%;
+    /* max-height: 40vh; */
 }
 
+#service-item .image-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
 
 #service-desc .title {
     font-size: 1.5vw;
@@ -48,18 +61,22 @@
 
 #service-desc .text-body {
     padding: 1em 0.5em;
+    font-size: 1.25vw;
 }
 
 
 #contact-us {
     height: 50vh;
-    padding: 2em 0 2em 0;
+    padding: 8em 0 2em 0;
 }
 
 #contact-us .container {
     height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
 }
 
 #contact-desc {
@@ -74,12 +91,12 @@
 }
 
 #contact-desc div:nth-child(2) {
-    font-size: 1vw;
+    font-size: 1.25vw;
     padding: 0.5em 5em 0.5em 1em;
 }
 
 #contact-form {
-    font-size: 0.8vw;
+    font-size: 1.25vw;
     display: flex;
     flex-direction: column;
     padding-top: 1em;
@@ -90,6 +107,7 @@
     border-radius: 15px/20px;
     height: 2em;
     padding-left: 1em;
+    width: 25em;
 }
 
 #contact-name {
@@ -136,6 +154,15 @@
 }
 
 
+
+.image-holder {
+    max-height: inherit;
+}  /* Place Holder  */
+
+.image-holder img {
+    max-width: 100%;
+    max-height: 100%;
+}
 
 
 @media only screen and (max-width: 768px) {

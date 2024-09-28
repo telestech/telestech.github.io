@@ -1,0 +1,84 @@
+@import url("./style.css");
+
+/* 
+* {
+    border: 1px solid red;
+} */
+
+body {
+
+}
+
+#about-us {
+    display: flex;
+    align-items: center;
+    margin: 1em 2em;
+}
+
+#about-us .image-holder {
+    padding-left: 2em;
+}
+ 
+#us-text {
+    text-align: justify;
+}
+
+#us-text h3 {
+    font-size: 4vw;
+    font-weight: lighter;
+}
+
+#us-text span {
+    line-height: 1.5;
+}
+
+#about-us .image-holder {
+}
+
+#founders-intro {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    background-color: rgba(209, 207, 207, 0.13);
+}
+
+#founders-intro > h3 {
+    text-align: center;
+    font-size: 3vw;
+}
+
+#founders-intro > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3em;
+}
+
+#founder-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 20vw;
+}
+
+#founder-item > div:nth-child(2) h5 {
+    font-size: 2vw;
+    font-weight: lighter;
+}
+
+#founder-item > div:nth-child(2) span {
+    line-height: 1.5;
+}
+
+#founder-item button {
+    text-align: center;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 500px;
+    background-color: var(--background-alt-color);
+    color: var(--text-alt-color);
+    height: 4em;
+    margin-top: 1em;
+}
+

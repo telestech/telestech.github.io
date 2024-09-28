@@ -6,8 +6,7 @@
 }
 
 body {
-    display: grid;
-    grid-template-rows: 10% 80% 10%;
+
 }
 
 #nav-bar {
@@ -65,6 +64,7 @@ body {
 
 
 footer {
+    padding-top: 2em;
     height: fit-content;
 }
 
@@ -117,4 +117,14 @@ footer .container > div:nth-child(2) {
 .footer-item ul li {
     font-size: 1vw;
     padding: 0 0 1em 0.5em;
+}
+
+
+.image-holder {
+    max-height: inherit;
+}  /* Place Holder  */
+
+.image-holder img {
+    max-width: 100%;
+    max-height: 100%;
 }
