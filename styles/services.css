@@ -20,7 +20,7 @@ body {}
 }
 
 #our-services > div:nth-child(1) span {
-    font-size: 1vw;
+    font-size: 1.25vw;
     line-height: 1.5;
 }
 
@@ -54,7 +54,7 @@ body {}
     text-align: justify;
     padding: 1em 0;
     line-height: 1.5;
-    font-size: 1vw;
+    font-size: 1.25vw;
 }
 
 #service-item button {

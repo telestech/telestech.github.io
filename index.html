@@ -3,6 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/index.css">
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script type="text/javascript" src="js/index.js"></script>
 </head>
 
@@ -24,7 +26,7 @@
                 <button>Services</button>
             </div>
             <div class="item">
-                <button>Contact</button>
+                <button>Products</button>
             </div>
         </div>
     </section>
@@ -128,7 +130,7 @@
                     </div>
                 </div>
                 <div>
-                    <form id="contact-form">
+                    <form id="contact-form" method="form">
                         <label>Name</label> <br>
                         <div id="contact-name">
                             <div>
@@ -149,7 +151,7 @@
                             <textarea id="message" name="message"></textarea>
                         </div>
                         <div id="contact-btn">
-                            <input type="submit" value="Send" />
+                            <input type="submit" value="Send" onclick="sendEmail()"/>
                         </div>
                     </form>
                 </div>

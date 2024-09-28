@@ -28,6 +28,7 @@
     flex-direction: row;
     align-items: center;
     background-color: rgba(196, 194, 194, 0.226);
+    padding-left: 0.5em;
 
 }
 
@@ -52,6 +53,7 @@
     align-items: center;
     padding-left: 1em;
     padding-right: 1em;
+    height: 19em;
 }
 
 #service-desc .title {
