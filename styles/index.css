@@ -22,6 +22,11 @@
 }
 
 
+#services-mobile {
+
+    display: none;
+}
+
 #services {
     line-height: 1.5;
     text-align: justify;
@@ -186,8 +191,17 @@
         overflow-x: hidden;
     }
 
-
     #services {
+        display: none;
+    }
+
+    #services-mobile {
+        line-height: 1.5;
+        text-align: justify;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgba(196, 194, 194, 0.226);
         padding-left: 0;
         width: 99.999%;
     }
