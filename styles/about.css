@@ -63,6 +63,11 @@ body {
     max-width: 20vw;
 }
 
+#founder-item .image-holder {
+    height: 30vh;
+    width: 30vw;
+}
+
 #founder-item > div:nth-child(2) h5 {
     font-size: 2vw;
     font-weight: lighter;

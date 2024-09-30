@@ -3,10 +3,22 @@
     --text-alt-color: white;
     --background-color: white;
     --background-alt-color: black;
+    --grad1: #f2f2f2;
+    --grad2: #e8e8e8;
+    --grad3: #efefef;
 }
 
-body {
+/* :root {
+    --text-color: white;
+    --text-alt-color: black;
+    --background-color: black;
+    --background-alt-color: white;
+    --grad1: #0b204b;
+    --grad2: #020202;
+    --grad3: #040f1e;
+} */
 
+body {
 }
 
 #nav-bar {
@@ -66,7 +78,7 @@ body {
 footer {
     padding-top: 2em;
     height: fit-content;
-    border-top: 1px solid black;
+    border-top: 1px solid var(--background-alt-color);
 }
 
 footer .container {
@@ -163,6 +175,6 @@ footer .container > div:nth-child(2) {
 
     .footer-item ul li {
         font-size: 3vw;
-        padding: 0 0 1em 0;
+        padding: 0 0 1em 1em;
     }
 }
