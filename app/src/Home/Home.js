@@ -1,12 +1,10 @@
-import Footer from "../Footer/Footer";
-import Navbar from "../Navbar/Navbar";
+import Footer from "../Components/Footer/Footer";
+import Navbar from "../Components/Navbar/Navbar";
 
 export default function Home() {
     return (
         <div className="bg-blue-400 overflow-x-hidden">
             <Navbar />
-            {titlePage()}
-            {titlePage()}
             {titlePage()}
             <Footer />
         </div>
@@ -16,7 +14,7 @@ export default function Home() {
 function titlePage() {
     return (
         <div className="h-screen w-screen">
-
+            <div className="absolute w-auto h-auto"></div>
         </div>
     )
 }
