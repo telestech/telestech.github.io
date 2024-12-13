@@ -1,6 +1,22 @@
+import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
-export function Home(){
-    return <div className=" bg-red-200 h-10 items-center justify-center flex text-xl">
-        Home Page
-    </div>
+export default function Home() {
+    return (
+        <div className="bg-blue-400 overflow-x-hidden">
+            <Navbar />
+            {titlePage()}
+            {titlePage()}
+            {titlePage()}
+            <Footer />
+        </div>
+    );
+}
+
+function titlePage() {
+    return (
+        <div className="h-screen w-screen">
+
+        </div>
+    )
 }
