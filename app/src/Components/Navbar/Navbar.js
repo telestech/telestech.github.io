@@ -1,6 +1,32 @@
+import React, { useState, useEffect } from "react";
+
 export default function Navbar() {
+    // This whole part is to hide the navbar when the user scrolls down, and show the navbar when the user scrolls up
+    // From here
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true)
+
+    const handleScroll = () => {
+        const currentScrollPos = window.scrollY
+
+        if (currentScrollPos > prevScrollPos) {
+            setVisible(false);
+        }else {
+            setVisible(true);
+        }
+
+        setPrevScrollPos(currentScrollPos);
+    }
+
+    useEffect( () => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => window.removeEventListener('scroll', handleScroll)
+    })
+    // To here
+
     return (
-        <div className="fixed top-0 bg-black h-20 w-full inline-flex z-50">
+        <div className={`fixed top-0 bg-black h-20 w-full inline-flex z-50 duration-300 ${visible ? 'translate-y-[0]' : 'translate-y-[-20vh]'}`}>
             <img className="h-full w-auto relative" src="/resources/logo without tagline.png" alt="Company Logo"/>
             <div className="h-full w-[55%] relative grid grid-cols-5 
                          *:text-white *:flex *:justify-center *:items-center *:text-[1.5vw]
