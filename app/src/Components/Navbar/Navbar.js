@@ -31,7 +31,7 @@ export default function Navbar() {
             <div className="h-full w-[55%] relative grid grid-cols-5 
                          *:text-white *:flex *:justify-center *:items-center *:text-[1.5vw]
                          hover:*:bg-white hover:*:text-black *:duration-200">
-                <a href="/home">
+                <a href="/">
                     <p>Home</p>
                 </a>
                 <a href="/about-us">
