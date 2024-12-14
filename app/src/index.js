@@ -4,13 +4,15 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Home from './Home/Home';
+import { Process } from './Process/Process';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <BrowserRouter>
             <Routes>
-                <Route path='/home' element={<Home/>}></Route>
+                <Route path='/' element={<Home/>}></Route>
+                <Route path='/process' element={<Process/>}></Route>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
