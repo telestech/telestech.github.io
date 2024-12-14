@@ -18,11 +18,11 @@ export default function Footer() {
             <div className="absolute bottom-0 left-0
                             flex flex-col justify-between items-start">
                 <div className="w-auto h-auto pl-[1vmin]
-                                text-gray-500 text-[2.5vmin]">
+                                text-footergray text-[2.5vmin]">
                     <p>© 2024 TelesTech LLC</p>
                 </div>
                 <div className="w-auto h-auto flex flex-row gap-[1vmin] pl-[1vmin]
-                                text-gray-500 text-[2.5vmin]">
+                                text-footergray text-[2.5vmin]">
                     <a href="/">Terms and Conditions</a>
                     <p>|</p>
                     <a href="/">Privacy Notice</a>
@@ -43,24 +43,27 @@ export default function Footer() {
             </div>
 
             {/* Bottom Right Corner: Social Medias */}
-            <div className="absolute bottom-[1vmin] right-[1vmin] w-auto h-[5vmin]
-                            grid grid-cols-5 gap-x-[2vmin]
-                            *:text-[4vmin] *:text-white">
-                <a href="/">
-                    <SiInstagram />
-                </a>
-                <a href="/">
-                    <SiGithub />
-                </a>
-                <a href="/">
-                    <SiX />
-                </a>
-                <a href="/">
-                    <SiLinkedin />
-                </a>
-                <a href="/">
-                    <SiOnlyfans />
-                </a>
+            <div className="absolute bottom-[1vmin] right-[1vmin] w-auto flex flex-col justify-center items-end">
+                <p className="text-[2.5vmin] text-footergray z-10">Mobile: +611 2345 67 89</p>
+                <p className="text-[2.5vmin] text-footergray z-10">Email: vinit@telestech.com</p>
+                <div className="w-auto h-[5vmin] grid grid-cols-5 gap-x-[2vmin] mt-[2vmin]
+                                *:text-[4vmin] *:text-white">
+                    <a href="/">
+                        <SiInstagram />
+                    </a>
+                    <a href="/">
+                        <SiGithub />
+                    </a>
+                    <a href="/">
+                        <SiX />
+                    </a>
+                    <a href="/">
+                        <SiLinkedin />
+                    </a>
+                    <a href="/">
+                        <SiOnlyfans />
+                    </a>
+                </div>
             </div>
         </div>
     );
