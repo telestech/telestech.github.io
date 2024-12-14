@@ -7,32 +7,28 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import { FaPencilAlt } from "react-icons/fa";
 import { HiMiniPresentationChartBar } from "react-icons/hi2";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
-
+  
 import 'react-vertical-timeline-component/style.min.css';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
-const code = `import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from "react-router";
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import Home from './Home/Home';
-import { Process } from './Process/Process';
+async function code(axios,destination,address,type){
+    
+    const googleId = await axios.get('http://localhost:4000/api/users/googleId', { withCredentials: true,
+        transformResponse: (res) => {
+            return res;
+    }});
+    await axios.post('http://localhost:4002/api/addRecord',{
+        googleId:googleId.data,
+        destination:destination,
+        address:address,
+        type:type,
+    }).catch((err)=>{console.log(err)});
+    
+}
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<Home/>}></Route>
-                <Route path='/process' element={<Process/>}></Route>
-            </Routes>
-        </BrowserRouter>
-    </React.StrictMode>
-);`;
 const logoYellow = '#debc6b';
 
 
