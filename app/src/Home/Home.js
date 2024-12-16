@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SiOnlyfans, SiInstagram, SiX, SiLinkedin, SiGithub } from "react-icons/si";
+import MediaQuery from 'react-responsive'
 import Footer from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar/Navbar";
 
@@ -19,8 +20,19 @@ const serviceList = [
     "Project Management"
 ]
 
+const serviceSlogan = {
+    "Software Development": "Empowering businesses with custom software solutions designed to drive innovation, enhance efficiency, and scale seamlessly.",
+    "Web Development": "Transform your online presence with cutting-edge web development that combines stunning design, robust functionality, and unmatched user experience.",
+    "Application Production": "Bringing your ideas to life with scalable, intuitive, and high-performing applications that redefine user engagement and functionality.",
+    "Data Analytics": "Unlock the power of your data with advanced analytics, delivering actionable insights to fuel smarter decision-making and business growth.",
+    "Technical Consulting": "Navigate complex technical challenges with expert consulting services tailored to optimize your IT infrastructure and strategy.",
+    "Project Management": "Ensuring your IT projects succeed on time, within budget, and beyond expectations with industry-leading project management expertise."
+}
+
 export default function Home() {
-    servicesSectionEffects();
+    useEffect(() => {
+        servicesSectionEffects();
+    });
 
     return (
         <div className="bg-white overflow-x-hidden">
@@ -39,43 +51,41 @@ function servicesSectionEffects() {
     Array.from(serviceSummaries).forEach(element => {
         element.addEventListener('mouseenter', function() {
             document.getElementById("services-title").style.opacity = 0;
-        });    
+            document.querySelector(`p.slogan[slogan="${element.getAttribute("slogan")}"]`).style.opacity = 1;
+        });
     });
 
     Array.from(serviceSummaries).forEach(element => {
         element.addEventListener('mouseleave', function() {
             document.getElementById("services-title").style.opacity = 1;
+            document.querySelector(`p.slogan[slogan="${element.getAttribute("slogan")}"]`).style.opacity = 0;
         });    
     });
 }
 
 function TitleSection() {
     return (
-        <div id="title" className="relative h-screen w-screen">
-            <div className="absolute left-0 top-[5vh] w-1/2 h-screen
+        <div id="title" className="relative h-screen w-screen flex flex-col lg:flex-row justify-center items-center">
+            <div className="relative w-full h-full
                             flex flex-col justify-center items-center gap-[3vh]">
-                <p className="font-serif text-black text-[6vw]">TELES TECH</p>
-                <p className="w-[80%] text-black text-[2vw] text-center">We build quality applications for businesses that scales like a dream</p>
-                <div className="flex flex-row justify-center items-center gap-[1vw] pt-[2vh]">
-                    <a href="#projects" className="rounded-full bg-logodarkyellow w-auto h-auto flex flex-row px-[2vw] py-[0.5vw]
-                                    justify-center items-center text-[1.5vw] font-bold text-black duration-200 hover:bg-black hover:text-white">
+                <p className="font-serif text-black text-[12vmin]">TELES TECH</p>
+                <p className="w-[80%] text-black text-[4vmin] text-center">We build quality applications for businesses that scales like a dream</p>
+                <div className="flex flex-row justify-center items-center gap-[2vmin] pt-[2vmin]">
+                    <a href="#projects" className="rounded-full bg-logodarkyellow w-auto h-auto flex flex-row px-[4vmin] py-[1vmin]
+                                    justify-center items-center text-[3vmin] font-bold text-black duration-200 hover:bg-black hover:text-white">
                         Get Started
                     </a>
-                    <a href="#enquiry" className="rounded-full bg-logoyellow w-auto h-auto flex flex-row px-[2vw] py-[0.5vw]
-                                    justify-center items-center text-[1.5vw] font-bold text-black duration-200 hover:bg-black hover:text-white">
+                    <a href="#enquiry" className="rounded-full bg-logoyellow w-auto h-auto flex flex-row px-[4vmin] py-[1vmin]
+                                    justify-center items-center text-[3vmin] font-bold text-black duration-200 hover:bg-black hover:text-white">
                         Contact Us
                     </a>
                 </div>
-                
             </div>
 
-            <div className="absolute right-0 top-[5vh] w-1/2 h-screen">
-                <div className="absolute w-full h-full flex justify-center items-center">
+            <div className="relative w-full h-full">
+                <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
                     <img src="/resources/just_the_T[1].png" className="absolute w-full h-auto p-[20%]" alt="Company Logo" />
                 </div>
-                {/* <div className="absolute w-full h-full flex justify-center items-center">
-                    <div className="absolute w-full h-full bg-gradient-to-tl from-white from-25% to-transparent"></div>
-                </div> */}
             </div>
         </div>
     )
@@ -125,23 +135,82 @@ function ProjectSummary(projectName, projectDesc) {
 
 function ServicesSection() {
     return (
-        <div id="services" className="relative h-screen w-screen overflow-hidden">
-            <div id="services-title" className="absolute left-0 top-0 w-full h-[40%] flex flex-col justify-center items-center text-center duration-200">
-                <p className="text-[8vmin] text-logodarkyellow z-10 font-serif font-bold">Our Services</p>
-                <p className="w-[80%] text-[3vmin] text-logodarkyellow z-10">
-                    Esse occaecat in qui culpa Lorem sit culpa anim qui minim. Occaecat irure cupidatat aute dolor. Anim officia enim mollit laboris consequat.
-                </p>
-            </div>
-            <div className="absolute bottom-[-30vh] left-[15%] w-[70%] h-[60%] flex justify-center items-center">
-                {serviceList.map((service, idx) => ServiceSummary(service))}
-            </div>
+        <div>
+            <MediaQuery minWidth={1224}>
+                <div id="services" className="relative h-screen w-screen overflow-hidden">
+                    <div id="services-title" className="absolute left-0 top-0 w-full h-[40%] flex flex-col justify-center items-center text-center transition-opacity duration-200">
+                        <p className="text-[8vmin] text-logodarkyellow z-10 font-serif font-bold">Our Services</p>
+                        <p className="w-[80%] text-[3vmin] text-logodarkyellow z-10">
+                            We transfrom your development problems into seamless solutions with reliable results.
+                        </p>
+                    </div>
+                    <div className="absolute bottom-[-30%] left-[15%] w-[70%] h-[60%] flex flex-row justify-center items-center">
+                        {serviceList.map((service, idx) => ServiceSummaryPC(service))}
+                    </div>
+                    <div className="absolute top-[5rem] left-[5%] w-[90%] h-[30%]
+                                    *:absolute *:top-0 *:text-logodarkyellow *:text-[3.5vmin] *:opacity-0 *:duration-200">
+                        <p slogan="Software Development" className="slogan right-0 w-[65%] text-right">
+                            {serviceSlogan["Software Development"]}
+                        </p>
+                        <p slogan="Web Development" className="slogan right-0 w-[55%] text-right">
+                            {serviceSlogan["Web Development"]}
+                        </p>
+                        <p slogan="Application Production" className="slogan right-0 w-[40%] text-right">
+                            {serviceSlogan["Application Production"]}
+                        </p>
+                        <p slogan="Data Analytics" className="slogan left-0 w-[40%] text-left">
+                            {serviceSlogan["Data Analytics"]}
+                        </p>
+                        <p slogan="Technical Consulting" className="slogan left-0 w-[55%] text-left">
+                            {serviceSlogan["Technical Consulting"]}
+                        </p>
+                        <p slogan="Project Management" className="slogan left-0 w-[65%] text-left">
+                            {serviceSlogan["Project Management"]}
+                        </p>
+                    </div>
+                </div>
+            </MediaQuery>
+            <MediaQuery maxWidth={1224}>
+                <div id="services" className="relative h-screen w-screen">
+                    <div id="services-title" className="absolute left-0 top-0 w-full h-[40%] flex flex-col justify-center items-center text-center transition-opacity duration-200">
+                        <p className="text-[8vmin] text-logodarkyellow z-10 font-serif font-bold">Our Services</p>
+                        <p className="w-[80%] text-[3vmin] text-logodarkyellow z-10">
+                            We transfrom your development problems into seamless solutions with reliable results.
+                        </p>
+                    </div>
+                    <div className="absolute bottom-[-2.5vh] left-[10%] w-[80%] h-[100%] flex flex-col justify-center items-center">
+                        {serviceList.map((service, idx) => ServiceSummaryMobile(service, idx))}
+                    </div>
+                    <div className="absolute top-[5rem] left-[5%] w-[90%] h-[30%]
+                                    *:absolute *:top-0 *:text-logodarkyellow *:text-[3.5vmin] *:opacity-0 *:duration-200">
+                        <p slogan="Software Development" className="slogan right-0 w-[65%] text-right">
+                            {serviceSlogan["Software Development"]}
+                        </p>
+                        <p slogan="Web Development" className="slogan right-0 w-[55%] text-right">
+                            {serviceSlogan["Web Development"]}
+                        </p>
+                        <p slogan="Application Production" className="slogan right-0 w-[40%] text-right">
+                            {serviceSlogan["Application Production"]}
+                        </p>
+                        <p slogan="Data Analytics" className="slogan left-0 w-[40%] text-left">
+                            {serviceSlogan["Data Analytics"]}
+                        </p>
+                        <p slogan="Technical Consulting" className="slogan left-0 w-[55%] text-left">
+                            {serviceSlogan["Technical Consulting"]}
+                        </p>
+                        <p slogan="Project Management" className="slogan left-0 w-[65%] text-left">
+                            {serviceSlogan["Project Management"]}
+                        </p>
+                    </div>
+                </div>
+            </MediaQuery>
         </div>
     );
 }
 
-function ServiceSummary(serviceName) {
+function ServiceSummaryPC(serviceName) {
     return (
-        <a key={serviceName} href="/" className="service-summary flex-none w-[50vmin] h-[60vh] m-[-15vmin] duration-300 hover:translate-y-[-25vh]
+        <a key={serviceName} slogan={serviceName} href="/" className="service-summary flex-none w-[50vmin] h-[60%] m-[-15vmin] duration-300 hover:translate-y-[-25vh]
                         flex justify-center items-center z-10 group">
             <div className="relative w-full aspect-[4/3] -rotate-[26deg] border-[1.5vmin] border-black bg-white
                             cursor-pointer duration-200 mb-[70vh] group-hover:bg-black">
@@ -149,6 +218,17 @@ function ServiceSummary(serviceName) {
                 <img className="absolute bottom-[2vmin] left-[2vmin] w-[calc(100%-4vmin)] h-[calc(100%-12vmin)]" src="/resources/240_F_456986840_BbHQK0bynMEDxMDJP0L3fkCMqnfmJ283.jpg" alt="Development" />
                 <p className="absolute top-[1vmin] right-[2vmin] text-[4vmin] text-black duration-200 group-hover:text-white">→</p>
             </div>  
+        </a>
+    );
+}
+
+function ServiceSummaryMobile(serviceName, idx) {
+    return (
+        <a key={serviceName} slogan={serviceName} href="/" className={`service-summary w-[50vmin] aspect-[4/3] ${idx % 2 === 0 ? "mb-[-13.5vmin]" : "mb-[-33.5vmin]"} -rotate-[18deg] border-[1.5vmin] border-black bg-white
+                        cursor-pointer z-10 ${idx % 2 === 0 ? "self-end" : "self-start"}`}>
+            <p className="absolute top-[2vmin] left-[2vmin] text-[3vmin] text-black">{serviceName}</p>
+            <img className="absolute bottom-[2vmin] left-[2vmin] w-[calc(100%-4vmin)] h-[calc(100%-12vmin)]" src="/resources/240_F_456986840_BbHQK0bynMEDxMDJP0L3fkCMqnfmJ283.jpg" alt="Development" />
+            <p className="absolute top-[1vmin] right-[2vmin] text-[4vmin] text-black">→</p>
         </a>
     );
 }
@@ -164,8 +244,8 @@ function EnquirySection() {
     }
 
     return (
-        <div id="enquiry" className="relative h-screen w-screen overflow-hidden">
-            <div className="absolute left-[4vmin] top-0 w-[45%] h-full flex flex-col justify-center items-center gap-[2vmin]">
+        <div id="enquiry" className="relative h-screen w-screen overflow-hidden flex flex-col lg:flex-row justify-around items-center">
+            <div className="relative w-full h-full flex flex-col justify-center items-center gap-[2vmin] border-transparent border-[4vmin]">
                 <p className="text-[8vmin] text-logodarkyellow font-serif font-bold">Message Us</p>
                 <form id="enquiry-form" action="/" className="w-full h-auto flex flex-col justify-center items-start text-center gap-[2vh]"
                       onSubmit={handleSubmit}>
@@ -191,7 +271,7 @@ function EnquirySection() {
                                      hover:border-logodarkyellow hover:bg-logodarkyellow hover:text-white" id="submit" name="submit" type="submit" value="Submit"></input>
                 </form>
             </div>
-            <div className="absolute bottom-0 right-[4vmin] w-[45%] h-full flex flex-col justify-center items-center gap-[1vh] border-transparent border-y-[4vmin]">
+            <div className="relative w-full h-full flex flex-col justify-center items-center gap-[1vh] border-transparent border-[4vmin]">
                 <img className="absolute top-0 left-0 w-full h-full brightness-75" src="/resources/240_F_723820135_tcfTiQlaVjadRhGdI5XlLdvOmUeZmwmY.jpg" alt="Background" />
                 <p className="text-[8vmin] text-white font-serif font-bold z-10">Contact Us</p>
                 <img className="w-auto h-[50%] z-10" src="/resources/WHITE_LOGO_WITHOUT_TAGLINE[1].png" alt='Company Logo' />
