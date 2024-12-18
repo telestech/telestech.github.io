@@ -4,6 +4,7 @@ const OurColors = {
     logoyellow: '#debc6b',
     logodarkyellow: '#977f48',
     enquirygray: 'rgb(209 213 219)',
+    darkenquirygray: 'rgb(107 114 128)',
     footergray: 'rgb(107 114 128)'
 };
 
