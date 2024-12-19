@@ -80,8 +80,8 @@ function TitleSection() {
         <div id="title" className="relative h-screen w-full flex flex-col lg:flex-row justify-center items-center">
             <div className="relative w-full h-full
                             flex flex-col justify-center items-center gap-[3vh]">
-                <p className="font-serif text-black text-[12vmin]">TELES TECH</p>
-                <p className="w-[80%] text-black text-[4vmin] text-center">We build quality applications for businesses that scales like a dream</p>
+                <p className="font-serif text-logodarkyellow text-[10vmin] text-center">Teles Technological Services</p>
+                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">We build quality applications for businesses that scales like a dream</p>
                 <div className="flex flex-row justify-center items-center gap-[2vmin] pt-[2vmin]">
                     <a href="#why-us" className="rounded-full bg-logodarkyellow w-auto h-auto flex flex-row px-[4vmin] py-[1vmin]
                                     justify-center items-center text-[3vmin] font-bold text-black duration-200 hover:bg-black hover:text-white">

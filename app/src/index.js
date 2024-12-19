@@ -5,6 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Home from './Home/Home';
 import { Process } from './Process/Process';
+import Resources from './Resources/Resources';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
                 <Route path='/' element={<Home/>}></Route>
                 <Route path='/home' element={<Home/>}></Route>
                 <Route path='/process' element={<Process/>}></Route>
+                <Route path='/resources' element={<Resources/>}></Route>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
