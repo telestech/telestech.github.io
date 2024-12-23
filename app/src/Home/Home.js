@@ -43,6 +43,10 @@ export default function Home() {
         width >= 1000 && servicesSectionEffects();
     }, [width]);
 
+    useEffect(() => {
+        emailInit();
+    });
+
     return (
         <div className="bg-white overflow-x-hidden">
             <Navbar />
@@ -56,6 +60,20 @@ export default function Home() {
             <Footer />
         </div>
     );
+}
+
+function emailInit() {
+    emailjs.init({
+        publicKey: 'lVvv1aogyTOl-q7no',
+        // Do not allow headless browsers
+        blockHeadless: true,
+        limitRate: {
+          // Set the limit rate for the application
+          id: 'app',
+          // Allow 1 request per 10s
+          throttle: 10000,
+        },
+      });
 }
 
 function servicesSectionEffects() {
@@ -83,7 +101,7 @@ function TitleSection() {
                 <p className="font-serif text-logodarkyellow text-[10vmin] text-center">Teles Technological Services</p>
                 <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">We build quality applications for businesses that scales like a dream</p>
                 <div className="flex flex-row justify-center items-center gap-[2vmin] pt-[2vmin]">
-                    <a href="#why-us" className="rounded-full bg-logodarkyellow w-auto h-auto flex flex-row px-[4vmin] py-[1vmin]
+                    <a href="#about-us" className="rounded-full bg-logodarkyellow w-auto h-auto flex flex-row px-[4vmin] py-[1vmin]
                                     justify-center items-center text-[3vmin] font-bold text-black duration-200 hover:bg-black hover:text-white">
                         Get Started
                     </a>
@@ -350,23 +368,39 @@ function EnquirySection() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        emailjs
-        .sendForm('web-form-vinit', 'web-form-template', form.current, {
-            publicKey: 'lVvv1aogyTOl-q7no',
-        })
-        .then(
-            () => {
-                console.log('SUCCESS!');
-            },
-            (error) => {
-                console.log('FAILED...', error.text);
-            },
-        );
+
+        let verified = formVerification(event.target);
+
+        if (!verified) {
+            document.getElementById("fill-all-text").style.display = "block";
+            return;
+        } else {
+            document.getElementById("submit").style.display = "none";
+            document.getElementById("fill-all-text").style.display = "none";
+            document.getElementById("receiving").style.display = "block";
+            emailjs
+            .sendForm('web-form-Teles', 'web-form-template', form.current)
+            .then(
+                (res) => {
+                    document.getElementById("form").style.display = "none";
+                    document.getElementById("thank-you").style.display = "flex";
+    
+                    console.log(res);
+                },
+                (error) => {
+                    document.getElementById("form").style.display = "none";
+                    document.getElementById("error").style.display = "flex";
+    
+                    console.log(error);
+                },
+            );
+        }
+
     }
 
     return (
         <div id="enquiry" className="relative h-screen w-full overflow-hidden flex flex-col lg:flex-row justify-around items-center">
-            <div className="relative w-full h-[50%] lg:h-full flex flex-col justify-center items-center gap-[2vmin] border-transparent border-[4vmin]">
+            <div id="form" className="relative w-full h-[50%] lg:h-full flex flex-col justify-center items-center gap-[2vmin] border-transparent border-[4vmin]">
                 <p className="text-[8vmin] text-logodarkyellow font-serif font-bold text-center">
                     Message Us
                 </p>
@@ -416,7 +450,7 @@ function EnquirySection() {
                                 className="w-[75%] focus:outline-none focus:ring-0"
                                 value={requirement}
                                 onChange={(e) => setRequirement(e.target.value)}>
-                            <option value=""></option>
+                            <option value="" disabled hidden></option>
                             <option value="Custom Software Development">Custom Software Development</option>
                             <option value="Custom Website Development">Custom Website Development</option>
                             <option value="Custom App Production">Custom App Production</option>
@@ -428,7 +462,7 @@ function EnquirySection() {
                     <div className="w-full border-[2px] border-enquirygray px-[2vmin] py-[1vmin] rounded-lg
                                 text-black text-[2vmin] flex flex-col justify-start items-start gap-[2vmin]">
                         <p className="text-darkenquirygray">Comments</p>
-                        <textarea id="message" name="message" maxLength={512} rows={4}
+                        <textarea id="comments" name="comments" maxLength={512} rows={4}
                            className="w-full h-auto border-enquirygray rounded-lg text-black text-[2vmin]
                                       focus:outline-none focus:ring-0 text-start resize-none"
                            value={comments}
@@ -438,7 +472,19 @@ function EnquirySection() {
                         <input className="border-[2px] border-enquirygray rounded-md px-[2vmin] py-[1vmin] cursor-pointer duration-200 text-black text-[2vmin]
                                         hover:border-logodarkyellow hover:bg-logodarkyellow hover:text-white" id="submit" name="submit" type="submit" value="Submit"></input>
                     </div>
+                    <p id="fill-all-text" className="hidden w-full text-[3vmin] text-logodarkyellow font-bold text-center">Please fill all the fields with <span className="text-red-500">*</span> !</p>
+                    <p id="receiving" className="hidden w-full text-[3vmin] text-logodarkyellow font-bold text-center">Receiving your message...</p>
                 </form>
+            </div>
+            <div id="thank-you" className="relative w-full h-[50%] hidden lg:h-full flex-col justify-center items-center gap-[2vmin] border-transparent border-[4vmin]">
+                <p className="font-serif text-logodarkyellow text-[12vmin]">Thank you!</p>
+                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Thank you for reaching out to us! We will reply to you within 3 business days.</p>
+                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Meanwhile, check out our other services, or follow us at the links to the right.</p>
+            </div>
+            <div id="error" className="relative w-full h-[50%] hidden lg:h-full flex-col justify-center items-center gap-[2vmin] border-transparent border-[4vmin]">
+                <p className="font-serif text-logodarkyellow text-[12vmin]">Oops...</p>
+                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Something happened while processing your request.</p>
+                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Please reload the page to try again, or contact us directly with the email to the right.</p>
             </div>
             <div className="relative w-full h-full m-[2vmin] lg:h-full lg:m-0 flex flex-col justify-center items-center gap-[1vh] border-transparent border-[4vmin]">
                 <img className="absolute top-0 left-0 w-full h-full brightness-75" src="/resources/240_F_723820135_tcfTiQlaVjadRhGdI5XlLdvOmUeZmwmY.jpg" alt="Background" />
@@ -448,8 +494,7 @@ function EnquirySection() {
                 <MediaQuery minWidth={1000}>
                     <img className="w-auto h-[50%] z-10" src="/resources/WHITE_LOGO_WITHOUT_TAGLINE[1].png" alt='Company Logo' />
                 </MediaQuery>
-                <p className="text-[3vmin] text-white z-10">Mobile: +611 2345 67 89</p>
-                <p className="text-[3vmin] text-white z-10">Email: vinit@telestech.com</p>
+                <p className="text-[3vmin] text-white z-10">Email: contact@telestech.com</p>
                 <div className="w-auto h-[5vmin] grid grid-cols-3 gap-x-[2vmin] z-10 p-[1vmin]
                                 *:text-[4vmin] *:text-white">
                     <a href="/">
@@ -465,4 +510,21 @@ function EnquirySection() {
             </div>
         </div>
     );
+}
+
+/**
+ * Verifies if the form required fields are filled.
+ * @param {*} form 
+ * @returns 
+ */
+function formVerification(form) {
+    if (form.name.value === "" ||
+        form.email.value === "" ||
+        form.country.value === "" ||
+        form.requirement.value === ""
+    ) {
+        return false;
+    } else {
+        return true;
+    }
 }

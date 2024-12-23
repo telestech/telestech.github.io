@@ -12,6 +12,7 @@ export default function Footer() {
                 <a href="/process">Process</a>
                 <a href="/projects">Projects</a>
                 <a href="/services">Services</a>
+                <a href="/resources">Resources</a>
             </div>
 
             {/* Bottom Left Corner: Copyright, Certificates, ToC, etc. */}
@@ -19,7 +20,7 @@ export default function Footer() {
                             flex flex-col justify-between items-start">
                 <div className="w-auto h-auto pl-[1vmin]
                                 text-footergray text-[2.5vmin]">
-                    <p>© 2024 TelesTech LLC</p>
+                    <p>© 2024 Teles Technological Services LLP</p>
                 </div>
                 <div className="w-auto h-auto flex flex-row gap-[1vmin] pl-[1vmin]
                                 text-footergray text-[2.5vmin]">
@@ -44,8 +45,7 @@ export default function Footer() {
 
             {/* Bottom Right Corner: Social Medias */}
             <div className="absolute bottom-[1vmin] right-[1vmin] w-auto flex flex-col justify-center items-end">
-                <p className="text-[2.5vmin] text-footergray z-10">Mobile: +611 2345 67 89</p>
-                <p className="text-[2.5vmin] text-footergray z-10">Email: vinit@telestech.com</p>
+                <p className="text-[2.5vmin] text-footergray z-10">Email: contact@telestech.com</p>
                 <div className="w-auto h-[5vmin] grid grid-cols-3 gap-x-[2vmin] mt-[2vmin]
                                 *:text-[4vmin] *:text-white">
                     <a href="/">
