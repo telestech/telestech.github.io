@@ -1,0 +1,177 @@
+import { useState, useRef } from "react";
+import { SiInstagram, SiLinkedin, SiGithub } from "react-icons/si";
+import emailjs from '@emailjs/browser';
+import MediaQuery from 'react-responsive'
+
+export function EnquirySection() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [companyName, setCompanyName] = useState("");
+    const [country, setCountry] = useState("");
+    const [requirement, setRequirement] = useState("");
+    const [comments, setComments] = useState("");
+
+    const form = useRef();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        let verified = formVerification(event.target);
+
+        if (!verified) {
+            document.getElementById("fill-all-text").style.display = "block";
+            return;
+        } else {
+            document.getElementById("submit").style.display = "none";
+            document.getElementById("fill-all-text").style.display = "none";
+            document.getElementById("receiving").style.display = "block";
+            emailjs
+            .sendForm('web-form-Teles', 'web-form-template', form.current)
+            .then(
+                (res) => {
+                    document.getElementById("form").style.display = "none";
+                    document.getElementById("thank-you").style.display = "flex";
+    
+                    console.log(res);
+                },
+                (error) => {
+                    document.getElementById("form").style.display = "none";
+                    document.getElementById("error").style.display = "flex";
+    
+                    console.log(error);
+                },
+            );
+        }
+
+    }
+
+    return (
+        <div id="enquiry" className="relative h-screen w-full overflow-hidden flex flex-col lg:flex-row justify-around items-center">
+            <div id="form" className="relative w-full h-[50%] lg:h-full flex flex-col justify-center items-center gap-[2vmin] border-transparent border-[4vmin]">
+                <p className="text-[8vmin] text-logodarkyellow font-serif font-bold text-center">
+                    Message Us
+                </p>
+                <form ref={form} id="enquiry-form" action="/" className="w-full h-auto flex flex-col justify-center items-start text-center gap-[2vh]"
+                      onSubmit={handleSubmit}>
+                    <div className="w-full border-[2px] border-enquirygray px-[2vmin] py-[1vmin] rounded-lg
+                                text-black text-[2vmin] flex flex-row justify-end items-center gap-[2vmin]">
+                        <p className="text-darkenquirygray">Name <span className="text-red-500">*</span></p>
+                        <div className="border-[1px] border-darkenquirygray w-[1px] h-full"></div>
+                        <input id="name" name="name" type="text" maxLength={128} rows={1}
+                            className="w-[75%] focus:outline-none focus:ring-0"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)} />
+                    </div>
+                    <div className="w-full border-[2px] border-enquirygray px-[2vmin] py-[1vmin] rounded-lg
+                                text-black text-[2vmin] flex flex-row justify-end items-center gap-[2vmin]">
+                        <p className="text-darkenquirygray text-nowrap">Email <span className="text-red-500">*</span></p>
+                        <div className="border-[1px] border-darkenquirygray w-[1px] h-full"></div>
+                        <input id="email" name="email" type="text" maxLength={128} rows={1}
+                            className="w-[75%] focus:outline-none focus:ring-0"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="w-full border-[2px] border-enquirygray px-[2vmin] py-[1vmin] rounded-lg
+                                text-black text-[2vmin] flex flex-row justify-end items-center gap-[2vmin]">
+                        <p className="text-darkenquirygray text-nowrap">Company Name</p>
+                        <div className="border-[1px] border-darkenquirygray w-[1px] h-full"></div>
+                        <input id="company-name" name="company-name" type="text" maxLength={128} rows={1}
+                            className="w-[75%] focus:outline-none focus:ring-0"
+                            value={companyName}
+                            onChange={(e) => setCompanyName(e.target.value)} />
+                    </div>
+                    <div className="w-full border-[2px] border-enquirygray px-[2vmin] py-[1vmin] rounded-lg
+                                text-black text-[2vmin] flex flex-row justify-end items-center gap-[2vmin]">
+                        <p className="text-darkenquirygray">Country <span className="text-red-500">*</span></p>
+                        <div className="border-[1px] border-darkenquirygray w-[1px] h-full"></div>
+                        <input id="country" name="country" type="text" maxLength={128} rows={1}
+                            className="w-[75%] focus:outline-none focus:ring-0"
+                            value={country}
+                            onChange={(e) => setCountry(e.target.value)} />
+                    </div>
+                    <div className="w-full border-[2px] border-enquirygray px-[2vmin] py-[1vmin] rounded-lg
+                                text-black text-[2vmin] flex flex-row justify-end items-center gap-[2vmin]">
+                        <p className="text-darkenquirygray">Requirement <span className="text-red-500">*</span></p>
+                        <div className="border-[1px] border-darkenquirygray w-[1px] h-full"></div>
+                        <select id="requirement" name="requirement"
+                                className="w-[75%] focus:outline-none focus:ring-0"
+                                value={requirement}
+                                onChange={(e) => setRequirement(e.target.value)}>
+                            <option value="" disabled hidden></option>
+                            <option value="Custom Software Development">Custom Software Development</option>
+                            <option value="Custom Website Development">Custom Website Development</option>
+                            <option value="Custom App Production">Custom App Production</option>
+                            <option value="AI/ML Development">AI/ML Development</option>
+                            <option value="IT Consultation">IT Consultation</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div className="w-full border-[2px] border-enquirygray px-[2vmin] py-[1vmin] rounded-lg
+                                text-black text-[2vmin] flex flex-col justify-start items-start gap-[2vmin]">
+                        <p className="text-darkenquirygray">Comments</p>
+                        <textarea id="comments" name="comments" maxLength={512} rows={4}
+                           className="w-full h-auto border-enquirygray rounded-lg text-black text-[2vmin]
+                                      focus:outline-none focus:ring-0 text-start resize-none"
+                           value={comments}
+                           onChange={(e) => setComments(e.target.value)}></textarea>
+                    </div>
+                    <div className="w-full">
+                        <input className="border-[2px] border-enquirygray rounded-md px-[2vmin] py-[1vmin] cursor-pointer duration-200 text-black text-[2vmin]
+                                        hover:border-logodarkyellow hover:bg-logodarkyellow hover:text-white" id="submit" name="submit" type="submit" value="Submit"></input>
+                    </div>
+                    <p id="fill-all-text" className="hidden w-full text-[3vmin] text-logodarkyellow font-bold text-center">Please fill all the fields with <span className="text-red-500">*</span> !</p>
+                    <p id="receiving" className="hidden w-full text-[3vmin] text-logodarkyellow font-bold text-center">Receiving your message...</p>
+                </form>
+            </div>
+            <div id="thank-you" className="relative w-full h-[50%] hidden lg:h-full flex-col justify-center items-center gap-[2vmin] border-transparent border-[4vmin]">
+                <p className="font-serif text-logodarkyellow text-[12vmin]">Thank you!</p>
+                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Thank you for reaching out to us! We will reply to you within 3 business days.</p>
+                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Meanwhile, check out our other services, or follow us at the links to the right.</p>
+            </div>
+            <div id="error" className="relative w-full h-[50%] hidden lg:h-full flex-col justify-center items-center gap-[2vmin] border-transparent border-[4vmin]">
+                <p className="font-serif text-logodarkyellow text-[12vmin]">Oops...</p>
+                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Something happened while processing your request.</p>
+                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Please reload the page to try again, or contact us directly with the email to the right.</p>
+            </div>
+            <div className="relative w-full h-full m-[2vmin] lg:h-full lg:m-0 flex flex-col justify-center items-center gap-[1vh] border-transparent border-[4vmin]">
+                <img className="absolute top-0 left-0 w-full h-full brightness-75" src="/resources/240_F_723820135_tcfTiQlaVjadRhGdI5XlLdvOmUeZmwmY.jpg" alt="Background" />
+                <p className="text-[8vmin] text-white font-serif font-bold text-center z-10">
+                    Contact Us
+                </p>
+                <MediaQuery minWidth={1000}>
+                    <img className="w-auto h-[50%] z-10" src="/resources/WHITE_LOGO_WITHOUT_TAGLINE[1].png" alt='Company Logo' />
+                </MediaQuery>
+                <p className="text-[3vmin] text-white z-10">Email: contact@telestech.com</p>
+                <div className="w-auto h-[5vmin] grid grid-cols-3 gap-x-[2vmin] z-10 p-[1vmin]
+                                *:text-[4vmin] *:text-white">
+                    <a href="/">
+                        <SiInstagram />
+                    </a>
+                    <a href="/">
+                        <SiGithub />
+                    </a>
+                    <a href="/">
+                        <SiLinkedin />
+                    </a>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+/**
+ * Verifies if the form required fields are filled.
+ * @param {*} form 
+ * @returns 
+ */
+function formVerification(form) {
+    if (form.name.value === "" ||
+        form.email.value === "" ||
+        form.country.value === "" ||
+        form.requirement.value === ""
+    ) {
+        return false;
+    } else {
+        return true;
+    }
+}

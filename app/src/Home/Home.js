@@ -1,16 +1,10 @@
-import { useEffect, useState, useRef } from "react";
-import { SiInstagram, SiLinkedin, SiGithub } from "react-icons/si";
+import { useEffect, useState } from "react";
 import emailjs from '@emailjs/browser';
 import MediaQuery from 'react-responsive'
 import Footer from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar/Navbar";
-
-const projectList = [
-    ["Skibidi", "Nisi dolor fugiat cillum id eu labore ex esse quis esse in. Consequat magna aute est dolore cillum sunt."],
-    ["Toilet", "Duis mollit in irure ea irure qui adipisicing eiusmod adipisicing. In sint incididunt nulla commodo in voluptate nostrud eiusmod ipsum qui laborum esse consequat labore."],
-    ["Dop Dop", "Incididunt id ea consectetur ea eiusmod nulla dolore elit reprehenderit consequat duis veniam. Qui sint officia consectetur pariatur excepteur est ullamco consequat dolore irure."],
-    ["Yes Yes", "Dolor exercitation occaecat velit tempor ea commodo enim do occaecat proident magna. Eu aliqua fugiat exercitation aliqua proident do aliquip velit."]
-]
+import names from "../webresources/names.json";
+import { EnquirySection } from "../Components/Enquiry/Enquiry";
 
 const serviceList = [
     "Software Development",
@@ -41,11 +35,11 @@ export default function Home() {
 
     useEffect(() => {
         width >= 1000 && servicesSectionEffects();
-    }, [width]);
+    });
 
     useEffect(() => {
         emailInit();
-    });
+    }, []);
 
     return (
         <div className="bg-white overflow-x-hidden">
@@ -56,7 +50,7 @@ export default function Home() {
             {WhyUsSection()}
             {ServicesSection()}
             {ProjectsSection()}
-            {EnquirySection()}
+            <EnquirySection />
             <Footer />
         </div>
     );
@@ -68,12 +62,12 @@ function emailInit() {
         // Do not allow headless browsers
         blockHeadless: true,
         limitRate: {
-          // Set the limit rate for the application
-          id: 'app',
-          // Allow 1 request per 10s
-          throttle: 10000,
+            // Set the limit rate for the application
+            id: 'app',
+            // Allow 1 request per 10s
+            throttle: 10000,
         },
-      });
+    });
 }
 
 function servicesSectionEffects() {
@@ -98,8 +92,8 @@ function TitleSection() {
         <div id="title" className="relative h-screen w-full flex flex-col lg:flex-row justify-center items-center">
             <div className="relative w-full h-full
                             flex flex-col justify-center items-center gap-[3vh]">
-                <p className="font-serif text-logodarkyellow text-[10vmin] text-center">Teles Technological Services</p>
-                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">We build quality applications for businesses that scales like a dream</p>
+                <p className="font-serif text-logodarkyellow text-[8vmin] text-center">Teles Technological Services</p>
+                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">{names.home.title.desc}</p>
                 <div className="flex flex-row justify-center items-center gap-[2vmin] pt-[2vmin]">
                     <a href="#about-us" className="rounded-full bg-logodarkyellow w-auto h-auto flex flex-row px-[4vmin] py-[1vmin]
                                     justify-center items-center text-[3vmin] font-bold text-black duration-200 hover:bg-black hover:text-white">
@@ -114,7 +108,7 @@ function TitleSection() {
 
             <div className="relative w-full h-full">
                 <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
-                    <img src="/resources/just_the_T[1].png" className="absolute w-full h-auto p-[20%]" alt="Company Logo" />
+                    <img src="/resources/just_the_T[1].png" className="absolute w-auto h-full lg:p-[20%]" alt="Company Logo" />
                 </div>
             </div>
         </div>
@@ -124,24 +118,24 @@ function TitleSection() {
 function AboutUsSection() {
     return (
         <div id="about-us" className="relative h-screen w-full overflow-hidden grid grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 border-[4vmin] border-transparent">
-            <img className="w-full h-full brightness-50 duration-200 lg:hover:brightness-100" src="/resources/240_F_550456541_mMBkyPx1G6XtqPYrT8mG12O8Uz5XBTCZ.jpg" alt="Software Development" />
-            <div className="flex flex-col justify-center items-center text-center gap-[2vmin] p-[5vmin]">
-                <p className="text-[5vmin] text-logodarkyellow font-serif font-bold">
-                    Dedicated Support Personnel
+            <img className="w-full h-full object-cover object-right-top brightness-50 duration-200 lg:hover:brightness-100" src="/resources/240_F_550456541_mMBkyPx1G6XtqPYrT8mG12O8Uz5XBTCZ.jpg" alt="Software Development" />
+            <div className="flex flex-col justify-center items-center text-center gap-[2vmin] lg:p-[5vmin]">
+                <p className="text-[3.5vmin] lg:text-[4vmin] text-logodarkyellow font-serif font-bold">
+                    {names.home.aboutUs.div1.title}
                 </p>
-                <p className="text-[3vmin] text-logodarkyellow">
-                    Teles Technological Services LLP provides dedicated support for troubleshooting, maintenance, and optimization of software and systems, ensuring prompt issue resolution and maximizing efficiency. The support team exemplifies Teles Tech’s commitment to client satisfaction and success.
-                </p>
-            </div>
-            <div className="flex flex-col justify-center items-center text-center gap-[2vmin] p-[5vmin]">
-                <p className="text-[5vmin] text-logodarkyellow font-serif font-bold">
-                    Offshore Development Team
-                </p>
-                <p className="text-[3vmin] text-logodarkyellow">
-                    Teles Technological Services LLP's offshore development team delivers custom software solutions efficiently and cost-effectively. Leveraging skilled talent, they offer flexible scaling, fast turnaround, and high-quality results, ensuring innovative solutions for clients worldwide.
+                <p className="text-[2vmin] lg:text-[3vmin] text-logodarkyellow">
+                    {names.home.aboutUs.div1.desc}
                 </p>
             </div>
-            <img className="w-full h-full brightness-50 duration-200 lg:hover:brightness-100" src="/resources/240_F_340591403_1a5sd1hXg78FIq4n6oeoXZtHP9Mjucsm.jpg" alt="Software Development" />
+            <div className="flex flex-col justify-center items-center text-center gap-[2vmin] lg:p-[5vmin]">
+                <p className="text-[3.5vmin] lg:text-[4vmin] text-logodarkyellow font-serif font-bold">
+                    {names.home.aboutUs.div2.title}
+                </p>
+                <p className="text-[2vmin] lg:text-[3vmin] text-logodarkyellow">
+                    {names.home.aboutUs.div2.desc}
+                </p>
+            </div>
+            <img className="w-full h-full object-cover object-right-top brightness-50 duration-200 lg:hover:brightness-100" src="/resources/240_F_340591403_1a5sd1hXg78FIq4n6oeoXZtHP9Mjucsm.jpg" alt="Software Development" />
         </div>
     );
 }
@@ -154,10 +148,10 @@ function WhyUsSection() {
                 <img className="absolute w-full h-full top-0 left-0 brightness-75"
                      src="/resources/240_F_885937882_GqcwdIttrGepx8ESiItGBG44tOvopC4K.jpg" alt="background" />
                 <p className="text-[5vmin] text-white font-serif font-bold z-10">
-                    Custom Website, Software, and ML/AI Algorithm development alongside dedicated teams for your unique business needs
+                    {names.home.whyUs.title}
                 </p>
                 <p className="text-[3vmin] text-white z-10">
-                    Our development teams are committed to helping you succeed in your endeavors!
+                    {names.home.whyUs.desc}
                 </p>
             </div>
             <div className="relative h-[50%] w-full flex flex-row justify-between items-center border-[4vmin] border-t-0 border-transparent divide-x-2 divide-footergray
@@ -166,15 +160,14 @@ function WhyUsSection() {
                 <img className="absolute w-full h-full top-0 left-0 brightness-75" alt="background" src="/resources/240_F_1001484691_7eVbQvSmX7xBzzkHJ0rZCTkw2Rv6fUrP.jpg" />
                 <div className="items-start border-none">
                     <p className="opacity-0">Empty</p>
-                    <p>Top Engineers</p>
-                    <p>Your own team</p>
-                    <p>Fast to work</p>
-                    <p>Scalable at speed</p>
-                    <p>Value for money</p>
-                    <p>IP Protection</p>
+                    {names.home.whyUs.table.col.map((val) => {
+                        return (
+                            <p key={val}>{val}</p>
+                        );
+                    })}
                 </div>
                 <div>
-                    <p className="font-serif font-bold">Hiring locally</p>
+                    <p className="font-serif font-bold">{names.home.whyUs.table.row[0]}</p>
                     <p>✔</p>
                     <p>✔</p>
                     <p className="opacity-0">✔</p>
@@ -183,7 +176,7 @@ function WhyUsSection() {
                     <p>✔</p>
                 </div>
                 <div>
-                    <p className="font-serif font-bold">Outsourcing</p>
+                    <p className="font-serif font-bold">{names.home.whyUs.table.row[1]}</p>
                     <p className="opacity-0">✔</p>
                     <p className="opacity-0">✔</p>
                     <p>✔</p>
@@ -193,7 +186,7 @@ function WhyUsSection() {
                 </div>
                 <div className="relative border-l-2 *:text-logoyellow">
                     <div className="absolute w-full h-full -z-10"></div>
-                    <p className="font-serif font-bold">Teles Tech</p>
+                    <p className="font-serif font-bold">{names.home.whyUs.table.row[2]}</p>
                     <p>✔</p>
                     <p>✔</p>
                     <p>✔</p>
@@ -228,7 +221,7 @@ function ProjectsSection() {
             <div className="absolute w-full h-1/2 bottom-0 left-0 flex flex-col lg:flex-row justify-center items-center">
                 <div className="relative inline-flex style-scrollbar border-x-[4vmin] gap-[2vw] overflow-x-auto overflow-y-hidden
                                 w-full h-full bottom-0 left-0 border-white border-[2vw] pb-4">
-                    {projectList.map((value, idx) => ProjectSummary(value[0], value[1]))}
+                    {names.projectList.map((value, idx) => ProjectSummary(value.name, value.desc))}
                 </div>
 
                 <div className="relative h-[20%] lg:h-full w-full lg:w-[30%] border-[2vw] border-transparent">
@@ -247,7 +240,7 @@ function ProjectSummary(projectName, projectDesc) {
         <div key={projectName} className="relative flex-none w-[45%] h-full lg:group overflow-hidden">
             <img className="w-full h-full brightness-[0.25] duration-200 lg:group-hover:scale-150" src="/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg" alt="Software Development" />
             <p className="absolute top-[2vmin] left-[2vmin] text-white text-[5vmin] font-bold">{projectName}</p>
-            <p className="absolute w-[80%] top-[10vmin] left-[2vmin] text-white text-[2.5vmin]">
+            <p className="absolute w-[80%] top-[10vmin] left-[2vmin] text-white text-[2vmin] opacity-80 lg:hover:opacity-100 lg:duration-200">
                 {projectDesc}
             </p>
             <a href="/" className="absolute bottom-[2vmin] right-[2vmin] text-white text-[3vmin]
@@ -264,7 +257,7 @@ function ServicesSection() {
                     <div id="services-title" className="absolute left-0 top-0 w-full h-[40%] flex flex-col justify-center items-center text-center transition-opacity duration-200">
                         <p className="text-[8vmin] text-logodarkyellow z-10 font-serif font-bold">Our Services</p>
                         <p className="w-[80%] text-[3vmin] text-logodarkyellow z-10">
-                            We transfrom your development problems into seamless solutions with reliable results.
+                            {names.home.ourServices.desc}
                         </p>
                     </div>
                     <div className="absolute bottom-[-30%] left-[15%] w-[70%] h-[60%] flex flex-row justify-center items-center">
@@ -273,22 +266,22 @@ function ServicesSection() {
                     <div className="absolute top-[5rem] left-[5%] w-[90%] h-[30%]
                                     *:absolute *:top-0 *:text-logodarkyellow *:text-[3.5vmin] *:opacity-0 *:duration-200">
                         <p slogan="Software Development" className="slogan right-0 w-[65%] text-right">
-                            {serviceSlogan["Software Development"]}
+                            {names.serviceList.softwareDevelopment.shortDesc}
                         </p>
                         <p slogan="Web Development" className="slogan right-0 w-[55%] text-right">
-                            {serviceSlogan["Web Development"]}
+                            {names.serviceList.webDevelopement.shortDesc}
                         </p>
                         <p slogan="Application Production" className="slogan right-0 w-[40%] text-right">
-                            {serviceSlogan["Application Production"]}
+                            {names.serviceList.applicationProduction.shortDesc}
                         </p>
                         <p slogan="Data Analytics" className="slogan left-0 w-[40%] text-left">
-                            {serviceSlogan["Data Analytics"]}
+                            {names.serviceList.dataAnalytics.shortDesc}
                         </p>
                         <p slogan="Technical Consulting" className="slogan left-0 w-[55%] text-left">
-                            {serviceSlogan["Technical Consulting"]}
+                            {names.serviceList.technicalConsulting.shortDesc}
                         </p>
                         <p slogan="Project Management" className="slogan left-0 w-[65%] text-left">
-                            {serviceSlogan["Project Management"]}
+                            {names.serviceList.projectManagement.shortDesc}
                         </p>
                     </div>
                 </div>
@@ -354,177 +347,4 @@ function ServiceSummaryMobile(serviceName, idx) {
             <p className="absolute top-[1vmin] right-[2vmin] text-[4vmin] text-black">→</p>
         </a>
     );
-}
-
-function EnquirySection() {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [companyName, setCompanyName] = useState("");
-    const [country, setCountry] = useState("");
-    const [requirement, setRequirement] = useState("");
-    const [comments, setComments] = useState("");
-
-    const form = useRef();
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-
-        let verified = formVerification(event.target);
-
-        if (!verified) {
-            document.getElementById("fill-all-text").style.display = "block";
-            return;
-        } else {
-            document.getElementById("submit").style.display = "none";
-            document.getElementById("fill-all-text").style.display = "none";
-            document.getElementById("receiving").style.display = "block";
-            emailjs
-            .sendForm('web-form-Teles', 'web-form-template', form.current)
-            .then(
-                (res) => {
-                    document.getElementById("form").style.display = "none";
-                    document.getElementById("thank-you").style.display = "flex";
-    
-                    console.log(res);
-                },
-                (error) => {
-                    document.getElementById("form").style.display = "none";
-                    document.getElementById("error").style.display = "flex";
-    
-                    console.log(error);
-                },
-            );
-        }
-
-    }
-
-    return (
-        <div id="enquiry" className="relative h-screen w-full overflow-hidden flex flex-col lg:flex-row justify-around items-center">
-            <div id="form" className="relative w-full h-[50%] lg:h-full flex flex-col justify-center items-center gap-[2vmin] border-transparent border-[4vmin]">
-                <p className="text-[8vmin] text-logodarkyellow font-serif font-bold text-center">
-                    Message Us
-                </p>
-                <form ref={form} id="enquiry-form" action="/" className="w-full h-auto flex flex-col justify-center items-start text-center gap-[2vh]"
-                      onSubmit={handleSubmit}>
-                    <div className="w-full border-[2px] border-enquirygray px-[2vmin] py-[1vmin] rounded-lg
-                                text-black text-[2vmin] flex flex-row justify-end items-center gap-[2vmin]">
-                        <p className="text-darkenquirygray">Name <span className="text-red-500">*</span></p>
-                        <div className="border-[1px] border-darkenquirygray w-[1px] h-full"></div>
-                        <input id="name" name="name" type="text" maxLength={128} rows={1}
-                            className="w-[75%] focus:outline-none focus:ring-0"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)} />
-                    </div>
-                    <div className="w-full border-[2px] border-enquirygray px-[2vmin] py-[1vmin] rounded-lg
-                                text-black text-[2vmin] flex flex-row justify-end items-center gap-[2vmin]">
-                        <p className="text-darkenquirygray text-nowrap">Email <span className="text-red-500">*</span></p>
-                        <div className="border-[1px] border-darkenquirygray w-[1px] h-full"></div>
-                        <input id="email" name="email" type="text" maxLength={128} rows={1}
-                            className="w-[75%] focus:outline-none focus:ring-0"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)} />
-                    </div>
-                    <div className="w-full border-[2px] border-enquirygray px-[2vmin] py-[1vmin] rounded-lg
-                                text-black text-[2vmin] flex flex-row justify-end items-center gap-[2vmin]">
-                        <p className="text-darkenquirygray text-nowrap">Company Name</p>
-                        <div className="border-[1px] border-darkenquirygray w-[1px] h-full"></div>
-                        <input id="company-name" name="company-name" type="text" maxLength={128} rows={1}
-                            className="w-[75%] focus:outline-none focus:ring-0"
-                            value={companyName}
-                            onChange={(e) => setCompanyName(e.target.value)} />
-                    </div>
-                    <div className="w-full border-[2px] border-enquirygray px-[2vmin] py-[1vmin] rounded-lg
-                                text-black text-[2vmin] flex flex-row justify-end items-center gap-[2vmin]">
-                        <p className="text-darkenquirygray">Country <span className="text-red-500">*</span></p>
-                        <div className="border-[1px] border-darkenquirygray w-[1px] h-full"></div>
-                        <input id="country" name="country" type="text" maxLength={128} rows={1}
-                            className="w-[75%] focus:outline-none focus:ring-0"
-                            value={country}
-                            onChange={(e) => setCountry(e.target.value)} />
-                    </div>
-                    <div className="w-full border-[2px] border-enquirygray px-[2vmin] py-[1vmin] rounded-lg
-                                text-black text-[2vmin] flex flex-row justify-end items-center gap-[2vmin]">
-                        <p className="text-darkenquirygray">Requirement <span className="text-red-500">*</span></p>
-                        <div className="border-[1px] border-darkenquirygray w-[1px] h-full"></div>
-                        <select id="requirement" name="requirement"
-                                className="w-[75%] focus:outline-none focus:ring-0"
-                                value={requirement}
-                                onChange={(e) => setRequirement(e.target.value)}>
-                            <option value="" disabled hidden></option>
-                            <option value="Custom Software Development">Custom Software Development</option>
-                            <option value="Custom Website Development">Custom Website Development</option>
-                            <option value="Custom App Production">Custom App Production</option>
-                            <option value="AI/ML Development">AI/ML Development</option>
-                            <option value="IT Consultation">IT Consultation</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    <div className="w-full border-[2px] border-enquirygray px-[2vmin] py-[1vmin] rounded-lg
-                                text-black text-[2vmin] flex flex-col justify-start items-start gap-[2vmin]">
-                        <p className="text-darkenquirygray">Comments</p>
-                        <textarea id="comments" name="comments" maxLength={512} rows={4}
-                           className="w-full h-auto border-enquirygray rounded-lg text-black text-[2vmin]
-                                      focus:outline-none focus:ring-0 text-start resize-none"
-                           value={comments}
-                           onChange={(e) => setComments(e.target.value)}></textarea>
-                    </div>
-                    <div className="w-full">
-                        <input className="border-[2px] border-enquirygray rounded-md px-[2vmin] py-[1vmin] cursor-pointer duration-200 text-black text-[2vmin]
-                                        hover:border-logodarkyellow hover:bg-logodarkyellow hover:text-white" id="submit" name="submit" type="submit" value="Submit"></input>
-                    </div>
-                    <p id="fill-all-text" className="hidden w-full text-[3vmin] text-logodarkyellow font-bold text-center">Please fill all the fields with <span className="text-red-500">*</span> !</p>
-                    <p id="receiving" className="hidden w-full text-[3vmin] text-logodarkyellow font-bold text-center">Receiving your message...</p>
-                </form>
-            </div>
-            <div id="thank-you" className="relative w-full h-[50%] hidden lg:h-full flex-col justify-center items-center gap-[2vmin] border-transparent border-[4vmin]">
-                <p className="font-serif text-logodarkyellow text-[12vmin]">Thank you!</p>
-                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Thank you for reaching out to us! We will reply to you within 3 business days.</p>
-                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Meanwhile, check out our other services, or follow us at the links to the right.</p>
-            </div>
-            <div id="error" className="relative w-full h-[50%] hidden lg:h-full flex-col justify-center items-center gap-[2vmin] border-transparent border-[4vmin]">
-                <p className="font-serif text-logodarkyellow text-[12vmin]">Oops...</p>
-                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Something happened while processing your request.</p>
-                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Please reload the page to try again, or contact us directly with the email to the right.</p>
-            </div>
-            <div className="relative w-full h-full m-[2vmin] lg:h-full lg:m-0 flex flex-col justify-center items-center gap-[1vh] border-transparent border-[4vmin]">
-                <img className="absolute top-0 left-0 w-full h-full brightness-75" src="/resources/240_F_723820135_tcfTiQlaVjadRhGdI5XlLdvOmUeZmwmY.jpg" alt="Background" />
-                <p className="text-[8vmin] text-white font-serif font-bold text-center z-10">
-                    Contact Us
-                </p>
-                <MediaQuery minWidth={1000}>
-                    <img className="w-auto h-[50%] z-10" src="/resources/WHITE_LOGO_WITHOUT_TAGLINE[1].png" alt='Company Logo' />
-                </MediaQuery>
-                <p className="text-[3vmin] text-white z-10">Email: contact@telestech.com</p>
-                <div className="w-auto h-[5vmin] grid grid-cols-3 gap-x-[2vmin] z-10 p-[1vmin]
-                                *:text-[4vmin] *:text-white">
-                    <a href="/">
-                        <SiInstagram />
-                    </a>
-                    <a href="/">
-                        <SiGithub />
-                    </a>
-                    <a href="/">
-                        <SiLinkedin />
-                    </a>
-                </div>
-            </div>
-        </div>
-    );
-}
-
-/**
- * Verifies if the form required fields are filled.
- * @param {*} form 
- * @returns 
- */
-function formVerification(form) {
-    if (form.name.value === "" ||
-        form.email.value === "" ||
-        form.country.value === "" ||
-        form.requirement.value === ""
-    ) {
-        return false;
-    } else {
-        return true;
-    }
 }

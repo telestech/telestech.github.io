@@ -26,7 +26,7 @@ function TitleSection() {
         <div id="title" className="relative h-screen w-full flex flex-col lg:flex-row justify-center items-center">
             <div className="relative w-full h-full
                             flex flex-col justify-center items-center gap-[3vh]">
-                <p className="font-serif text-logodarkyellow text-[12vmin]">Our Resources</p>
+                <p className="font-serif text-logodarkyellow text-[12vmin] font-bold">Our Resources</p>
                 <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">From blogs, templates to relating files, you can find them all here.</p>
             </div>
             <div className="relative w-full h-full">
