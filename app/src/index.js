@@ -8,19 +8,22 @@ import { Process } from './Process/Process';
 import { AboutUs } from "./About Us/AboutUs";
 import { Projects } from "./Projects/Projects";
 import { Services } from "./Services/Services";
+import { ThemeProvider } from "./Components/Theme/Theme";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<Home/>}></Route>
-                <Route path='/process' element={<Process/>}></Route>
-                <Route path="/about-us" element={<AboutUs/>}></Route>
-                <Route path='/projects' element={<Projects/>}></Route>
-                <Route path='/services' element={<Services/>}></Route>
-            </Routes>
-        </BrowserRouter>
+        <ThemeProvider>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Home />}></Route>
+                    <Route path='/process' element={<Process />}></Route>
+                    <Route path="/about-us" element={<AboutUs />}></Route>
+                    <Route path='/projects' element={<Projects />}></Route>
+                    <Route path='/services' element={<Services />}></Route>
+                </Routes>
+            </BrowserRouter>
+        </ThemeProvider>
     </React.StrictMode>
 );
 

@@ -1,0 +1,134 @@
+{
+    "projectList": [
+        {
+            "name": "HRMS System",
+            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "desc": "Streamline your workforce management with our cutting-edge HRMS system, designed to simplify payroll, attendance, recruitment, and compliance. Empower your team with an intuitive self-service portal and actionable analytics, ensuring efficiency and engagement at every level."
+        },
+        {
+            "name": "pArt App",
+            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "desc": "Unleash your creativity with pArt, the ultimate platform for art enthusiasts and creators. Whether you're showcasing your masterpieces, collaborating with peers, or discovering inspiring works, pArt connects artists to a thriving global community."
+        },
+        {
+            "name": "Sama Says Website",
+            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "desc": "Turn your entrepreneurial vision into reality with Sama Says, your gateway to expert guidance, refined strategies, and investment readiness. Navigate our seamless website to explore a step-by-step journey tailored to bring your business ideas to life."
+        },
+        {
+            "name": "Sama Says App",
+            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "desc": "Accelerate your entrepreneurial success with the Sama Says app, offering personalized mentorship, real-time resources, and networking opportunities at your fingertips. Transform ideas into impactful ventures, all from the convenience of your mobile device."
+        },
+        {
+            "name": "CRM System",
+            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "desc": "Revolutionize your customer relationships with our powerful CRM system, designed to enhance engagement, drive sales, and deliver actionable insights. From lead management to customer support, experience a seamless solution that adapts to your business needs."
+        },
+        {
+            "name": "Coming Soon!",
+            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "desc": ""
+        }
+    ],
+    "serviceList": {
+        "softwareDevelopment": {
+            "name": "Software Development",
+            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "shortDesc": "We specialize in creating custom software solutions tailored to meet your unique business requirements.",
+            "longDesc": "At Teles Technological Services LLP, we specialize in creating custom software solutions tailored to meet your unique business requirements. From concept to deployment, our team ensures seamless integration, robust functionality, and scalability, empowering your organization to adapt and thrive in an ever-evolving digital landscape."
+        },
+        "webDevelopement": {
+            "name": "Web Development",
+            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "shortDesc": "Our web development services focus on building dynamic, responsive, and visually captivating websites that not only showcase your brand but also offer an exceptional user experience.",
+            "longDesc": "Our web development services focus on building dynamic, responsive, and visually captivating websites that not only showcase your brand but also offer an exceptional user experience. Whether it's an e-commerce platform, a corporate site, or a custom web application, we ensure optimized performance and cutting-edge technology integration."
+        },
+        "applicationProduction": {
+            "name": "Application Production",
+            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "shortDesc": "From mobile apps to desktop solutions, we bring your ideas to life with innovative, user-friendly, and high-performance applications.",
+            "longDesc": "From mobile apps to desktop solutions, we bring your ideas to life with innovative, user-friendly, and high-performance applications. Whether your goal is to enhance customer engagement or streamline internal processes, our team ensures a seamless and impactful app production experience."
+        },
+        "dataAnalytics": {
+            "name": "Data Analytics",
+            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "shortDesc": "Leveraging modern tools and methodologies, we help businesses identify trends, make informed decisions, and gain a competitive edge.",
+            "longDesc": "We transform raw data into valuable insights through advanced data analytics services. Leveraging modern tools and methodologies, we help businesses identify trends, make informed decisions, and gain a competitive edge. From building dashboards to implementing predictive models, we ensure data becomes your strongest asset."
+        },
+        "technicalConsulting": {
+            "name": "Technical Consulting",
+            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "shortDesc": "Our technical consulting services are designed to bridge the gap between technology and business strategy.",
+            "longDesc": "Our technical consulting services are designed to bridge the gap between technology and business strategy. We help organizations identify inefficiencies, implement cutting-edge solutions, and optimize existing systems, ensuring you remain competitive and innovative in a rapidly changing tech environment."
+        },
+        "projectManagement": {
+            "name": "Project Management",
+            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "shortDesc": "We offer end-to-end project management services that guarantee the successful execution of your initiatives.",
+            "longDesc": "We offer end-to-end project management services that guarantee the successful execution of your initiatives. With a focus on meticulous planning, resource allocation, risk mitigation, and timely delivery, we ensure your projects are completed within scope, on time, and to the highest standards of quality."
+        }
+    },
+    "leadersList": [
+        {
+            "name": "Aaron",
+            "img": "/resources/13.png",
+            "desc": "Aaron, one of the Partners of Teles Technological Services LLP, holds a Master in Astrophysics from the University of Sheffield. As a skilled financial manager and programmer, Aaron oversees the firm's accounting and financial operations with precision and expertise. Beyond his professional role, Aaron has a passion for MMA, traveling, and sharing his knowledge through teaching."
+        },
+        {
+            "name": "Ash",
+            "img": "/resources/17.png",
+            "desc": "Ash, one of the Partners of Teles Technological Services LLP, holds a Master in Quantum Computing from the University of Strathclyde. With a dual focus as an HR manager and programmer, Ash is responsible for managing the firm's HR functions and driving research and development initiatives. Outside of work, Ash enjoys spending time with animals, exploring diverse cuisines, and indulging in a love for reading."
+        },
+        {
+            "name": "Vinit",
+            "img": "/resources/4.png",
+            "desc": "Vinit, one of the Partners of Teles Technological Services LLP, holds a Master in IT and a Master in IT Management from the University of Sydney. As a skilled data engineer and project manager, he brings a wealth of technical expertise and leadership to the firm. Outside of his professional pursuits, Vinit enjoys playing badminton, traveling, and indulging in photography."
+        }
+    ],
+    "aboutUs": {
+        "title": "About Us",
+        "subtitle": "A trusted partner for taking your business to new heights!",
+        "para1": "Teles Technological Services LLP is a dynamic technology company dedicated to delivering innovative solutions that cater to the unique needs of businesses across various industries.",
+        "para2": "Specializing in custom software development, website development, and app development, Teles Tech excels in creating bespoke applications that are scalable, robust, and seamlessly integrated with existing systems. Our expertise extends to developing responsive, user-friendly websites, including e-commerce platforms with secure payment gateways and content management systems (CMS) for easy updates. In the realm of app development, we create mobile, web, and desktop applications designed for optimal performance and user engagement.",
+        "para3": "Additionally, we are at the forefront of AI and machine learning, developing custom algorithms that enhance decision-making, automate processes, and provide actionable insights. Our dedicated support personnel ensure that clients receive ongoing technical assistance, troubleshooting, and optimization, reinforcing our commitment to client satisfaction and operational success.",
+        "para4": "Furthermore, our offshore development team brings a wealth of expertise, offering flexible scaling of resources, faster turnaround times, and access to a diverse talent pool, enabling us to deliver high-quality solutions at competitive costs. By leveraging technology to solve business challenges, Teles Technological Services aims to empower organizations to achieve their goals, drive innovation, and enhance their operational efficiency."
+    },
+    "home": {
+        "title": {
+            "desc": "We build quality applications for businesses that scales like a dream"
+        },
+        "aboutUs": {
+            "div1": {
+                "title": "Dedicated Support Personnel",
+                "desc": "Teles Technological Services LLP provides dedicated support for troubleshooting, maintenance, and optimization of software and systems, ensuring prompt issue resolution and maximizing efficiency. The support team exemplifies Teles Tech's commitment to client satisfaction and success."
+            },
+            "div2": {
+                "title": "Offshore Development Team",
+                "desc": "Teles Technological Services LLP's offshore development team delivers custom software solutions efficiently and cost-effectively. Leveraging skilled talent, they offer flexible scaling, fast turnaround, and high-quality results, ensuring innovative solutions for clients worldwide."
+            }
+        },
+        "whyUs": {
+            "title": "Custom Website, Software, and ML/AI Algorithm development alongside dedicated teams for your unique business needs",
+            "desc": "Our development teams are committed to helping you succeed in your endeavors!",
+            "table": {
+                "row": [
+                    "Hiring locally",
+                    "Outsourcing",
+                    "Teles Tech"
+                ],
+                "col": [
+                    "Top Engineers",
+                    "Your own team",
+                    "Fast to work",
+                    "Scalable at speed",
+                    "Value for money",
+                    "IP Protection"
+                ]
+            }
+        },
+        "ourServices": {
+            "desc": "We transfrom your development problems into seamless solutions with reliable results."
+        }
+    }
+}
