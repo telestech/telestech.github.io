@@ -5,10 +5,11 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Home from './Home/Home';
 import { Process } from './Process/Process';
+import Resources from './Resources/Resources';
 import { AboutUs } from "./About Us/AboutUs";
 import { Projects } from "./Projects/Projects";
 import { Services } from "./Services/Services";
-import { ThemeProvider } from "./Components/Theme/Theme";
+import { ThemeProvider } from './Components/Theme/Theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,11 +17,13 @@ root.render(
         <ThemeProvider>
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={<Home />}></Route>
-                    <Route path='/process' element={<Process />}></Route>
-                    <Route path="/about-us" element={<AboutUs />}></Route>
-                    <Route path='/projects' element={<Projects />}></Route>
-                    <Route path='/services' element={<Services />}></Route>
+                    <Route path='/' element={<Home/>}></Route>
+                    <Route path='/home' element={<Home/>}></Route>
+                    <Route path='/process' element={<Process/>}></Route>
+                    <Route path='/resources' element={<Resources/>}></Route>
+                    <Route path="/about-us" element={<AboutUs/>}></Route>
+                    <Route path='/projects' element={<Projects/>}></Route>
+                    <Route path='/services' element={<Services/>}></Route>
                 </Routes>
             </BrowserRouter>
         </ThemeProvider>

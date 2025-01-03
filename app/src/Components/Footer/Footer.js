@@ -1,4 +1,4 @@
-import { SiOnlyfans, SiInstagram, SiX, SiLinkedin, SiGithub } from "react-icons/si";
+import { SiInstagram, SiLinkedin, SiGithub } from "react-icons/si";
 
 export default function Footer() {
     return (
@@ -12,6 +12,7 @@ export default function Footer() {
                 <a href="/process">Process</a>
                 <a href="/projects">Projects</a>
                 <a href="/services">Services</a>
+                <a href="/resources">Resources</a>
             </div>
 
             {/* Bottom Left Corner: Copyright, Certificates, ToC, etc. */}
@@ -19,7 +20,7 @@ export default function Footer() {
                             flex flex-col justify-between items-start">
                 <div className="w-auto h-auto pl-[1vmin]
                                 text-footergray text-[2.5vmin]">
-                    <p>© 2024 TelesTech LLC</p>
+                    <p>© 2024 Teles Technological Services LLP</p>
                 </div>
                 <div className="w-auto h-auto flex flex-row gap-[1vmin] pl-[1vmin]
                                 text-footergray text-[2.5vmin]">
@@ -29,24 +30,23 @@ export default function Footer() {
                     <p>|</p>
                     <a href="/">Cookies Preferences</a>
                 </div>
-                <div className="w-auto h-[10vh] flex flex-row gap-[1vmin] p-[1vmin] justify-start items-start
+                {/* <div className="w-auto h-[10vh] flex flex-row gap-[1vmin] p-[1vmin] justify-start items-start
                                 *:h-full *:w-auto">
                     <img src="/resources/iso-9001-certified-logo-AC594FAD01-seeklogo.com.png" alt="ISO 9001 Certified" />
                     <img src="/resources/ISO-27001-Certification-Novolyze.png" alt="ISO 27001 Certified" />
-                </div>
+                </div> */}
             </div>
 
             {/* Top Right Corner: Partners */}
-            <div className="absolute top-[1vmin] right-[1vmin] w-auto h-[10%] flex flex-col justify-between items-center
+            {/* <div className="absolute top-[1vmin] right-[1vmin] w-auto h-[10%] flex flex-col justify-between items-center
                            *:object-fill *:max-h-full">
                 <img src="/resources/Startup-India-Logo1-02.webp" alt="#startupindia" />
-            </div>
+            </div> */}
 
             {/* Bottom Right Corner: Social Medias */}
             <div className="absolute bottom-[1vmin] right-[1vmin] w-auto flex flex-col justify-center items-end">
-                <p className="text-[2.5vmin] text-footergray z-10">Mobile: +611 2345 67 89</p>
-                <p className="text-[2.5vmin] text-footergray z-10">Email: vinit@telestech.com</p>
-                <div className="w-auto h-[5vmin] grid grid-cols-5 gap-x-[2vmin] mt-[2vmin]
+                <p className="text-[2.5vmin] text-footergray z-10">Email: contact@telestech.com</p>
+                <div className="w-auto h-[5vmin] grid grid-cols-3 gap-x-[2vmin] mt-[2vmin]
                                 *:text-[4vmin] *:text-white">
                     <a href="/">
                         <SiInstagram />
@@ -55,13 +55,7 @@ export default function Footer() {
                         <SiGithub />
                     </a>
                     <a href="/">
-                        <SiX />
-                    </a>
-                    <a href="/">
                         <SiLinkedin />
-                    </a>
-                    <a href="/">
-                        <SiOnlyfans />
                     </a>
                 </div>
             </div>

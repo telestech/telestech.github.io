@@ -34,6 +34,7 @@ export function Services() {
     return (
         <div className={`min-h-screen ${isDarkMode ? "bg-[#121212]" : "bg-gray-100"}`}>
             <Navbar />
+            <div className="h-20"></div> {/* Padding for scrollbar */}
 
             <section className="relative h-[70vh] flex items-center justify-between px-10">
                 <div className="relative z-10 text-left text-white max-w-[50%]">
@@ -64,7 +65,7 @@ export function Services() {
                     title={service.name}
                     description={service.longDesc}
                     image={service.img}
-                    textColor={index % 2 === 0 ? "text-logo-yellow" : "text-background-blue"}
+                    textColor={index % 2 === 0 ? "text-logoyellow" : "text-background-blue"}
                     reverse={index % 2 !== 0}
                 />
             ))}

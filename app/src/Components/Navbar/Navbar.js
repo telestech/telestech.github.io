@@ -29,13 +29,12 @@ export default function Navbar() {
 
     return (
         <div className={`fixed top-0 bg-black h-20 w-full inline-flex z-50 duration-300 ${visible ? 'translate-y-[0]' : 'translate-y-[-20vh]'}`}>
-            <img className="h-full w-auto relative" src="/resources/logo without tagline.png" alt="Company Logo"/>
-            <div className="h-full w-[55%] relative grid grid-cols-5 
+            <a href="/" className="h-full w-auto">
+                <img className="h-full w-full relative p-4 px-6" src="/resources/just_the_T[1].png" alt="Company Logo"/>
+            </a>
+            <div className="h-full w-[55%] relative grid grid-cols-6 
                          *:text-white *:flex *:justify-center *:items-center *:text-[1.5vw]
                          hover:*:bg-white hover:*:text-black *:duration-200">
-                <a href="/">
-                    <p>Home</p>
-                </a>
                 <a href="/about-us">
                     <p>About Us</p>
                 </a>
@@ -48,6 +47,9 @@ export default function Navbar() {
                 <a href="/services">
                     <p>Services</p>
                 </a>
+                <a href="/resources">
+                    <p>Resources</p>
+                </a>
             </div>
 
             <div className="absolute right-[12rem] top-[1.45rem] flex items-center">
@@ -59,7 +61,7 @@ export default function Navbar() {
                 </button>
             </div>
 
-            <a href="/home#form" className="absolute right-[1rem] top-[1rem] w-[10vw] h-[calc(100%-2rem)] rounded-full bg-[#debc6b]
+            <a href="/home#enquiry" className="absolute right-[1rem] top-[1rem] w-[10vw] h-[calc(100%-2rem)] rounded-full bg-[#debc6b]
                                             flex flex-row justify-center items-center text-[1.25vw] font-bold text-black duration-200 hover:bg-white">
                 <p>Contact Us</p>
             </a>

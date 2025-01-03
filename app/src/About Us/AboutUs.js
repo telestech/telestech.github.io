@@ -8,6 +8,7 @@ export function AboutUs() {
     return (
         <div className="bg-white overflow-x-hidden">
             <Navbar />
+            <div className="h-20"></div> {/* Padding for scrollbar */}
             <AboutUsSection aboutUsData={data.aboutUs} />
             <OurTeamSection leadersList={data.leadersList} />
             <Footer />

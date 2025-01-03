@@ -32,6 +32,14 @@
         }
     ],
     "serviceList": {
+        "names": [
+            "Software Development",
+            "Web Development",
+            "Application Production",
+            "Data Analytics",
+            "Technical Consulting",
+            "Project Management"
+        ],
         "softwareDevelopment": {
             "name": "Software Development",
             "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
