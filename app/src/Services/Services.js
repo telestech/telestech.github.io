@@ -2,6 +2,7 @@ import Footer from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar/Navbar";
 import { useTheme } from "../Components/Theme/Theme";
 import data from "../webresources/names.json";
+import names from "../webresources/names.json";
 
 export function Services() {
     const { isDarkMode } = useTheme();
@@ -34,29 +35,24 @@ export function Services() {
     return (
         <div className={`min-h-screen ${isDarkMode ? "bg-[#121212]" : "bg-gray-100"}`}>
             <Navbar />
-            <div className="h-20"></div> {/* Padding for scrollbar */}
+            <div className="h-20 bg-black"></div> {/* Padding for scrollbar */}
 
-            <section className="relative h-[70vh] flex items-center justify-between px-10">
-                <div className="relative z-10 text-left text-white max-w-[50%]">
-                    <h1 className="text-[3rem] sm:text-[4rem] font-serif font-bold mb-6">Our Services</h1>
-                    <h2 className="text-[1.5rem] sm:text-[2rem] font-serif font-bold mb-6">
-                        Tailored tech solutions to empower your business and drive innovation.
-                    </h2>
-                </div>
-
-                <div className="relative z-10 w-[40%]">
+            <section className="relative h-[70vh] flex items-center justify-between">
+                <div className="relative w-full h-[70vh]">
                     <img
-                        src="/resources/services.png"
-                        alt="Heading Illustration"
-                        className="w-full h-auto rounded-lg shadow-lg"
+                        className={`absolute w-full h-full ${isDarkMode ? "brightness-[0.25] saturate-0" : "brightness-75"} object-cover`}
+                        src="/resources/240_F_885937882_GqcwdIttrGepx8ESiItGBG44tOvopC4K.jpg"
+                        alt="About Us Background"
                     />
+                    <div className={`absolute inset-0 flex flex-col justify-center items-center text-center ${isDarkMode ? "text-logoyellow" : "text-white"} px-6`}>
+                        <h1 className="text-[2.5rem] md:text-[4rem] font-serif font-bold mb-4">
+                            {names.services.title}
+                        </h1>
+                        <h2 className="w-[75%] text-[1.5rem] md:text-[2rem] font-serif mb-4">
+                            {names.services.subtitle}
+                        </h2>
+                    </div>
                 </div>
-
-                <img
-                    src="/resources/240_F_885937882_GqcwdIttrGepx8ESiItGBG44tOvopC4K.jpg"
-                    alt="Our Services Background"
-                    className="absolute top-0 left-0 w-full h-full brightness-75 object-cover"
-                />
             </section>
 
             {servicedata.map((service, index) => (

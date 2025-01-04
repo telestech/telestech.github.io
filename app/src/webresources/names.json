@@ -94,6 +94,10 @@
             "desc": "Vinit, one of the Partners of Teles Technological Services LLP, holds a Master in IT and a Master in IT Management from the University of Sydney. As a skilled data engineer and project manager, he brings a wealth of technical expertise and leadership to the firm. Outside of his professional pursuits, Vinit enjoys playing badminton, traveling, and indulging in photography."
         }
     ],
+    "process": {
+        "title": "Our Process",
+        "subtitle": "We're an Agile Team. That means we can flexibly incorporate any changes you might have."
+    },
     "aboutUs": {
         "title": "About Us",
         "subtitle": "A trusted partner for taking your business to new heights!",
@@ -101,6 +105,16 @@
         "para2": "Specializing in custom software development, website development, and app development, Teles Tech excels in creating bespoke applications that are scalable, robust, and seamlessly integrated with existing systems. Our expertise extends to developing responsive, user-friendly websites, including e-commerce platforms with secure payment gateways and content management systems (CMS) for easy updates. In the realm of app development, we create mobile, web, and desktop applications designed for optimal performance and user engagement.",
         "para3": "Additionally, we are at the forefront of AI and machine learning, developing custom algorithms that enhance decision-making, automate processes, and provide actionable insights. Our dedicated support personnel ensure that clients receive ongoing technical assistance, troubleshooting, and optimization, reinforcing our commitment to client satisfaction and operational success.",
         "para4": "Furthermore, our offshore development team brings a wealth of expertise, offering flexible scaling of resources, faster turnaround times, and access to a diverse talent pool, enabling us to deliver high-quality solutions at competitive costs. By leveraging technology to solve business challenges, Teles Technological Services aims to empower organizations to achieve their goals, drive innovation, and enhance their operational efficiency."
+    },
+    "resources": {
+        "title": "Our Resources",
+        "subtitle": "From well-researched blogs to high-quality files, this is where we keep our gold.",
+        "blogTitle": "Our Blogs",
+        "blogSubtitle": "Our blogs provide valuable, well-researched insights, practical solutions, and updates on industry trends"
+    },
+    "services": {
+        "title": "Our Services",
+        "subtitle": "Tailored tech solutions to empower your business and drive innovation."
     },
     "home": {
         "title": {

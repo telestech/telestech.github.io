@@ -1,5 +1,7 @@
 import Footer from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar/Navbar";
+import names from "../webresources/names.json";
+import { useTheme } from "../Components/Theme/Theme";
 import { MyCodeBlock } from "../Components/MyCodeBlock/MyCodeBlock";
 import { SiKakaotalk } from "react-icons/si";
 import { FaMagnifyingGlass } from "react-icons/fa6";
@@ -29,75 +31,84 @@ async function code(axios,destination,address,type){
 }
 
 const logoYellow = '#debc6b';
-
+const logoDarkYellow = '#977f48';
 
 export function Process() {
   return (
     <div className="">
         <Navbar />
-        <div className="h-20"></div> {/* Padding for scrollbar */}
-        {TitleSection()}
-        {ISOSection()}
-        {SloganSection()}
-        {TimelineSection()}
+        <div className="h-20 bg-black"></div> {/* Padding for scrollbar */}
+        <TitleSection />
+        {/* <ISOSection /> */}
+        <SloganSection />
+        <TimelineSection />
         <Footer />
     </div>
   );
 }
 
 function TitleSection() {
+    const { isDarkMode } = useTheme();
+
     return (
-        <div id="title" className="relative h-screen w-full flex flex-col lg:flex-row justify-center items-center">
-            <div className="relative w-full h-full
-                            flex flex-col justify-center items-center gap-[3vh]">
-                <p className="font-serif text-logodarkyellow text-[12vmin] font-bold">Our Process</p>
-                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">We're an Agile Team. That means we can flexibly incorporate any changes you might have.</p>
-            </div>
-            <div className="relative w-full h-full">
-                <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
-                    <img src="/resources/just_the_T[1].png" className="absolute w-full h-auto p-[20%]" alt="Company Logo" />
-                </div>
+        <div className="relative w-full h-[70vh]">
+            <img
+                className={`absolute w-full h-full ${isDarkMode ? "brightness-[0.25] saturate-0" : "brightness-75"} object-cover`}
+                src="/resources/240_F_885937882_GqcwdIttrGepx8ESiItGBG44tOvopC4K.jpg"
+                alt="About Us Background"
+            />
+            <div className={`absolute inset-0 flex flex-col justify-center items-center text-center ${isDarkMode ? "text-logoyellow" : "text-white"} px-6`}>
+                <h1 className="text-[2.5rem] md:text-[4rem] font-serif font-bold mb-4">
+                    {names.process.title}
+                </h1>
+                <h2 className="w-[75%] text-[1.5rem] md:text-[2rem] font-serif mb-4">
+                    {names.process.subtitle}
+                </h2>
             </div>
         </div>
     );
 }
 
-function ISOSection() {
-    return (
-        <div className="bg-slate-200">
-            <div className="text-center text-2xl font-bold p-6 text-slate-800">
-                Certified By
-            </div>
-            <div className="flex justify-center space-x-7 pb-4">
-            <img
-                width="72px"
-                height="72px"
-                src="/resources/iso-9001-certified-logo-AC594FAD01-seeklogo.com.png"
-                alt="ISO 9001 Certified"
-            />
-            <img
-                width="72px"
-                height="72px"
-                src="/resources/ISO-27001-Certification-Novolyze.png"
-                alt="ISO 27001 Certified"
-            />
-            </div>
-        </div>
-    );
-}
+// function ISOSection() {
+//     const { isDarkMode } = useTheme();
+
+//     return (
+//         <div className={`${isDarkMode ? "bg-black text-white" : "bg-white text-black"}`}>
+//             <div className="text-center text-2xl font-bold p-6">
+//                 Certified By
+//             </div>
+//             <div className="flex justify-center space-x-7 pb-4">
+//             <img
+//                 width="72px"
+//                 height="72px"
+//                 src="/resources/iso-9001-certified-logo-AC594FAD01-seeklogo.com.png"
+//                 alt="ISO 9001 Certified"
+//             />
+//             <img
+//                 width="72px"
+//                 height="72px"
+//                 src="/resources/ISO-27001-Certification-Novolyze.png"
+//                 alt="ISO 27001 Certified"
+//             />
+//             </div>
+//         </div>
+//     );
+// }
 
 function SloganSection() {
+    const { isDarkMode } = useTheme();
+
     return (
-        <div className="p-8 grid lg:grid-cols-2">
+        <div className={`p-8 grid lg:grid-cols-2 ${isDarkMode ? "bg-black text-logoyellow" : "bg-white text-logodarkyellow"}`}>
             <div className="flex flex-col justify-center">
-            <p className="text-3xl lg:text-4xl font-bold lg:text-start text-center font-serif text-logodarkyellow">
-                We're coding magicians
-            </p>
-            <p className="lg:text-2xl mt-2 lg:text-start text-center text-logodarkyellow">
-                You imagine it, we build it
-            </p>
-            </div>
-            <div className="overflow-x-scroll no-scrollbar">
+                <p className="text-3xl lg:text-4xl font-bold lg:text-start text-center font-serif">
+                    We're coding magicians
+                </p>
+                <p className="lg:text-2xl mt-2 lg:text-start text-center">
+                    You imagine it, we build it
+                </p>
+                </div>
+            <div className={`overflow-x-hidden border-4 p-2 ${isDarkMode ? "border-logoyellow" : "border-logodarkyellow"}`}>
                 <MyCodeBlock code={code} language={"js"} />
             </div>
         </div>
@@ -105,17 +116,18 @@ function SloganSection() {
 }
 
 function TimelineSection() {
+    const { isDarkMode } = useTheme();
+
     return (
-        <div className="bg-slate-200">
+        <div className={`bg-gradient-to-b ${ isDarkMode ? "from-black to-logodarkyellow text-logoyellow" : "from-white to-logoyellow text-logodarkyellow" }`}>
             <VerticalTimeline> 
             <VerticalTimelineElement
-            
-                contentStyle={{padding:'0px'}}
-                contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-                iconStyle={{ background: logoYellow, color: "white", }}
+                contentStyle={{padding:'0px', boxShadow: "none", background: "transparent"}}
+                contentArrowStyle={{ borderRight: `7px solid ${isDarkMode ? "#debc6b" : "#977f48"}` }}
+                iconStyle={{ background: isDarkMode ? logoYellow : logoDarkYellow, color: isDarkMode ? "black" : "white" }}
                 icon={<SiKakaotalk  />}
             >
-                <div className="p-4 rounded hover:shadow-xl transition-shadow duration-300 hover:cursor-pointer">
+                <div className={`p-4 rounded border-4 ${isDarkMode ? "border-logoyellow bg-black" : "border-logodarkyellow bg-white"}`}>
                     <h3 className="font-bold text-lg">
                         Consultation
                     </h3>
@@ -126,12 +138,12 @@ function TimelineSection() {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="flex justify-end"
-                contentStyle={{padding:'0px'}}
-                contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-                iconStyle={{ background: logoYellow, color: "white", }}
+                contentStyle={{padding:'0px', boxShadow: "none", background: "transparent"}}
+                contentArrowStyle={{ borderRight: `7px solid ${isDarkMode ? "#debc6b" : "#977f48"}` }}
+                iconStyle={{ background: isDarkMode ? logoYellow : logoDarkYellow, color: isDarkMode ? "black" : "white" }}
                 icon={<FaMagnifyingGlass   />}
             >
-                <div className="p-4 rounded hover:shadow-xl transition-shadow duration-300 hover:cursor-pointer">
+                <div className={`p-4 rounded border-4 ${isDarkMode ? "border-logoyellow bg-black" : "border-logodarkyellow bg-white"}`}>
                     <h3 className="font-bold text-lg">
                         Research
                     </h3>
@@ -141,13 +153,12 @@ function TimelineSection() {
                 </div>
             </VerticalTimelineElement>
             <VerticalTimelineElement
-                
-                contentStyle={{padding:'0px'}}
-                contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-                iconStyle={{ background: logoYellow, color: "white", }}
+                contentStyle={{padding:'0px', boxShadow: "none", background: "transparent"}}
+                contentArrowStyle={{ borderRight: `7px solid ${isDarkMode ? "#debc6b" : "#977f48"}` }}
+                iconStyle={{ background: isDarkMode ? logoYellow : logoDarkYellow, color: isDarkMode ? "black" : "white" }}
                 icon={<FaPencilAlt />}
             >
-                <div className="p-4 rounded hover:shadow-xl transition-shadow duration-300 hover:cursor-pointer">
+                <div className={`p-4 rounded border-4 ${isDarkMode ? "border-logoyellow bg-black" : "border-logodarkyellow bg-white"}`}>
                     <h3 className="font-bold text-lg">
                         Sketch
                     </h3>
@@ -158,12 +169,12 @@ function TimelineSection() {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="flex justify-end"
-                contentStyle={{padding:'0px'}}
-                contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-                iconStyle={{ background: logoYellow, color: "white", }}
+                contentStyle={{padding:'0px', boxShadow: "none", background: "transparent"}}
+                contentArrowStyle={{ borderRight: `7px solid ${isDarkMode ? "#debc6b" : "#977f48"}` }}
+                iconStyle={{ background: isDarkMode ? logoYellow : logoDarkYellow, color: isDarkMode ? "black" : "white" }}
                 icon={<HiMiniPresentationChartBar   />}
             >
-                <div className="p-4 rounded hover:shadow-xl transition-shadow duration-300 hover:cursor-pointer">
+                <div className={`p-4 rounded border-4 ${isDarkMode ? "border-logoyellow bg-black" : "border-logodarkyellow bg-white"}`}>
                     <h3 className="font-bold text-lg">
                         Present
                     </h3>
@@ -173,13 +184,12 @@ function TimelineSection() {
                 </div>
             </VerticalTimelineElement>
             <VerticalTimelineElement
-                
-                contentStyle={{padding:'0px'}}
-                contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-                iconStyle={{ background: 'green', color: "white", }}
+                contentStyle={{padding:'0px', boxShadow: "none", background: "transparent"}}
+                contentArrowStyle={{ borderRight: `7px solid ${isDarkMode ? "#debc6b" : "#977f48"}` }}
+                iconStyle={{ background: isDarkMode ? logoYellow : logoDarkYellow, color: isDarkMode ? "black" : "white" }}
                 icon={<HiMiniRocketLaunch />}
             >
-                <div className="p-4 rounded hover:shadow-xl transition-shadow duration-300 hover:cursor-pointer">
+                <div className={`p-4 rounded border-4 ${isDarkMode ? "border-logoyellow bg-black" : "border-logodarkyellow bg-white"}`}>
                     <h3 className="font-bold text-lg">
                         Launch
                     </h3>

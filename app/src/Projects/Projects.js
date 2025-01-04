@@ -15,7 +15,7 @@ export function Projects() {
     return (
         <div className={`${isDarkMode ? "bg-[#121212] text-white" : "bg-background-blue text-white"} min-h-screen flex flex-col`}>
             <Navbar />
-            <div className="h-20"></div> {/* Padding for scrollbar */}
+            <div className="h-20 bg-black"></div> {/* Padding for scrollbar */}
             <div className={`flex flex-col justify-center items-center text-center h-[50vh] ${isDarkMode ? "bg-gradient-to-r from-[#1E1E1E] via-dark-yellow to-[#1E1E1E]" : "bg-gradient-to-r from-background-blue via-dark-yellow to-background-blue"}`}>
                 <h1 className="text-[12vmin] font-serif font-bold">Our Projects</h1>
             </div>

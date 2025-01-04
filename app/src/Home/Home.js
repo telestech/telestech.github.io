@@ -26,9 +26,9 @@ export default function Home() {
     }, []);
 
     return (
-        <div className={`overflow-x-hidden bg-gradient-to-r transition-all duration-300 ${ isDarkMode ? "from-logodarkyellow to-black" : "from-white to-logoyellow" }`}>
+        <div className={`overflow-x-hidden bg-gradient-to-r ${ isDarkMode ? "from-logodarkyellow to-black" : "from-white to-logoyellow" }`}>
             <Navbar />
-            <div className="h-20"></div> {/* Padding for scrollbar */}
+            <div className="h-20 bg-black"></div> {/* Padding for scrollbar */}
             <TitleSection />
             <AboutUsSection />
             <WhyUsSection />
