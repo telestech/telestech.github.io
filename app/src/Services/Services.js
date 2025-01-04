@@ -6,7 +6,7 @@ import data from "../webresources/names.json";
 export function Services() {
     const { isDarkMode } = useTheme();
 
-    const servicedata = Object.values(data.serviceList);
+    const servicedata = Object.values(data.serviceList).slice(1);
 
     const ServiceSection = ({ title, description, image, textColor, reverse }) => {
         return (
@@ -22,10 +22,10 @@ export function Services() {
                 </div>
 
                 <div className="w-full md:w-1/2">
-                    <h2 className={`text-4xl font-serif font-bold mb-4 ${textColor}`}>
+                    <h2 className={`text-3xl sm:text-4xl font-serif font-bold mb-4 ${textColor}`}>
                         {title}
                     </h2>
-                    <p className={`text-2lg leading-relaxed mb-6 ${isDarkMode ? "text-white" : "text-black"}`}>{description}</p>
+                    <p className={`text-sm sm:text-lg leading-relaxed mb-6 ${isDarkMode ? "text-white" : "text-black"}`}>{description}</p>
                 </div>
             </section>
         );
@@ -38,8 +38,8 @@ export function Services() {
 
             <section className="relative h-[70vh] flex items-center justify-between px-10">
                 <div className="relative z-10 text-left text-white max-w-[50%]">
-                    <h1 className="text-[4rem] font-serif font-bold mb-6">Our Services</h1>
-                    <h2 className="text-[2rem] font-serif font-bold mb-6">
+                    <h1 className="text-[3rem] sm:text-[4rem] font-serif font-bold mb-6">Our Services</h1>
+                    <h2 className="text-[1.5rem] sm:text-[2rem] font-serif font-bold mb-6">
                         Tailored tech solutions to empower your business and drive innovation.
                     </h2>
                 </div>
