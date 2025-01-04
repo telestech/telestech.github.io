@@ -122,19 +122,19 @@ export function EnquirySection() {
                                         ${isDarkMode ? "text-white border-white hover:bg-white hover:text-logodarkyellow" : "text-black border-black hover:bg-black hover:text-white"}`}
                                         id="submit" name="submit" type="submit" value="Submit"></input>
                     </div>
-                    <p id="fill-all-text" className="hidden w-full text-[3vmin] text-logodarkyellow font-bold text-center">Please fill all the fields with <span className="text-red-500">*</span> !</p>
-                    <p id="receiving" className="hidden w-full text-[3vmin] text-logodarkyellow font-bold text-center">Receiving your message...</p>
+                    <p id="fill-all-text" className={`hidden w-full text-[3vmin] ${isDarkMode ? "text-white" : "text-black"} font-bold text-center`}>Please fill all the fields with <span className="text-red-500">*</span> !</p>
+                    <p id="receiving" className={`hidden w-full text-[3vmin] ${isDarkMode ? "text-white" : "text-black"} font-bold text-center`}>Receiving your message...</p>
                 </form>
             </div>
             <div id="thank-you" className="relative w-full h-[50%] hidden lg:h-full flex-col justify-center items-center gap-[2vmin] border-transparent border-[4vmin]">
-                <p className="font-serif text-logodarkyellow text-[12vmin]">Thank you!</p>
-                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Thank you for reaching out to us! We will reply to you within 3 business days.</p>
-                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Meanwhile, check out our other services, or follow us at the links to the right.</p>
+                <p className={`font-serif ${isDarkMode ? "text-white" : "text-black"} text-[12vmin]`}>Thank you!</p>
+                <p className={`w-[80%] ${isDarkMode ? "text-white" : "text-black"} text-[4vmin] text-center`}>Thank you for reaching out to us! We will reply to you within 3 business days.</p>
+                <p className={`w-[80%] ${isDarkMode ? "text-white" : "text-black"} text-[4vmin] text-center`}>Meanwhile, check out our other services, or follow us at the links to the right.</p>
             </div>
             <div id="error" className="relative w-full h-[50%] hidden lg:h-full flex-col justify-center items-center gap-[2vmin] border-transparent border-[4vmin]">
-                <p className="font-serif text-logodarkyellow text-[12vmin]">Oops...</p>
-                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Something happened while processing your request.</p>
-                <p className="w-[80%] text-logodarkyellow text-[4vmin] text-center">Please reload the page to try again, or contact us directly with the email to the right.</p>
+                <p className={`font-serif ${isDarkMode ? "text-white" : "text-black"} text-[12vmin]`}>Oops...</p>
+                <p className={`w-[80%] ${isDarkMode ? "text-white" : "text-black"} text-[4vmin] text-center`}>Something happened while processing your request.</p>
+                <p className={`w-[80%] ${isDarkMode ? "text-white" : "text-black"} text-[4vmin] text-center`}>Please reload the page to try again, or contact us directly with the email to the right.</p>
             </div>
             <div className={`relative w-full h-auto p-[5vmin] lg:h-full lg:m-0 flex flex-col justify-center items-center gap-[1vh] border-transparent border-[4vmin]
                         ${isDarkMode ? "text-logoyellow" : "text-white"}`}>
