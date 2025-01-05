@@ -3,6 +3,7 @@ import { SiInstagram, SiLinkedin, SiGithub } from "react-icons/si";
 import emailjs from '@emailjs/browser';
 import MediaQuery from 'react-responsive'
 import { useTheme } from "../Theme/Theme";
+import names from "../../webresources/names.json";
 
 export function EnquirySection() {
     const { isDarkMode } = useTheme();
@@ -149,13 +150,13 @@ export function EnquirySection() {
                 <p className="text-[3vmin] z-10">Email: contact@telestech.com</p>
                 <div className="w-auto h-[5vmin] grid grid-cols-3 gap-x-[2vmin] z-10 p-[1vmin]
                                 *:text-[4vmin]">
-                    <a href="/">
+                    <a href={names.links.instagram} target="_blank" rel="noreferrer">
                         <SiInstagram />
                     </a>
-                    <a href="/">
+                    <a href={names.links.github} target="_blank" rel="noreferrer">
                         <SiGithub />
                     </a>
-                    <a href="/">
+                    <a href={names.links.linkedin} target="_blank" rel="noreferrer">
                         <SiLinkedin />
                     </a>
                 </div>

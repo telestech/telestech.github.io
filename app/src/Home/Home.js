@@ -204,11 +204,11 @@ function ProjectsSection() {
                             flex flex-col text-center justify-center items-center gap-[5%] ${isDarkMode ? "text-logoyellow" : "text-white"}`}>
                 <img className={`absolute w-full h-full ${isDarkMode ? "brightness-[0.25] saturate-0" : "brightness-75"}`}
                      src="/resources/240_F_885937882_GqcwdIttrGepx8ESiItGBG44tOvopC4K.jpg" alt="background" />
-                <p className="w-[80%] text-[8vmin] z-10 font-serif font-bold">Our Projects</p>
+                <p className="w-[80%] text-[8vmin] z-10 font-serif font-bold">
+                    {names.home.ourProjects.title}
+                </p>
                 <p className="w-[60%] text-[3vmin] z-10">
-                    Ea voluptate id dolore non exercitation voluptate irure pariatur cillum.
-                    Deserunt ut Lorem ad sunt duis Lorem consequat proident.
-                    Elit cillum pariatur consequat quis aliqua sint proident occaecat nostrud sunt.
+                    {names.home.ourProjects.subtitle}
                 </p>
             </div>
             <div className="absolute w-full h-1/2 bottom-0 left-0 flex flex-col lg:flex-row justify-center items-center">
@@ -256,7 +256,7 @@ function ServicesSection() {
                         </p>
                     </div>
                     <div className="absolute bottom-[-30%] left-[15%] w-[70%] h-[60%] flex flex-row justify-center items-center">
-                        {names.serviceList.names.map((service) => ServiceSummaryPC(service))}
+                        {names.serviceList.names.map((service) => ServiceSummaryPC(names.serviceList[service]))}
                     </div>
                     <div className={`absolute top-[5rem] left-[5%] w-[90%] h-[30%]
                                     *:absolute *:top-0 *:${ isDarkMode ? "text-white" : "text-black" } *:text-[3.5vmin] *:opacity-0 *:duration-200`}>
@@ -285,14 +285,16 @@ function ServicesSection() {
     );
 }
 
-function ServiceSummaryPC(serviceName) {
+function ServiceSummaryPC(service) {
     return (
-        <a key={serviceName} slogan={serviceName} href="/" className="service-summary flex-none w-[50vmin] h-[60%] m-[-15vmin] duration-300 hover:translate-y-[-25vh]
+        <a key={service.name} slogan={service.name} href="/" className="service-summary flex-none w-[50vmin] h-[60%] m-[-15vmin] duration-300 hover:translate-y-[-25vh]
                         flex justify-center items-center z-10 group">
             <div className="relative w-full aspect-[4/3] -rotate-[26deg] border-[1.5vmin] border-black bg-white
                             cursor-pointer duration-200 mb-[70vh] group-hover:bg-black">
-                <p className="absolute top-[2vmin] left-[2vmin] text-[3vmin] text-black duration-200 group-hover:text-white">{serviceName}</p>
-                <img className="absolute bottom-[2vmin] left-[2vmin] w-[calc(100%-4vmin)] h-[calc(100%-12vmin)]" src="/resources/240_F_456986840_BbHQK0bynMEDxMDJP0L3fkCMqnfmJ283.jpg" alt="Development" />
+                <p className="absolute top-[2vmin] left-[2vmin] text-[3vmin] text-black duration-200 group-hover:text-white">{service.name}</p>
+                <div className="absolute bottom-[2vmin] left-[2vmin] w-[calc(100%-4vmin)] h-[calc(100%-12vmin)]">
+                    <img className="w-full h-full object-cover object-top" src={service.img} alt="Development" />
+                </div>
                 <p className="absolute top-[1vmin] right-[2vmin] text-[4vmin] text-black duration-200 group-hover:text-white">→</p>
             </div>  
         </a>

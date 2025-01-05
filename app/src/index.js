@@ -5,7 +5,6 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Home from './Home/Home';
 import { Process } from './Process/Process';
-import Resources from './Resources/Resources';
 import { AboutUs } from "./About Us/AboutUs";
 import { Projects } from "./Projects/Projects";
 import { Services } from "./Services/Services";
@@ -20,7 +19,7 @@ root.render(
                     <Route path='/' element={<Home/>}></Route>
                     <Route path='/home' element={<Home/>}></Route>
                     <Route path='/process' element={<Process/>}></Route>
-                    <Route path='/resources' element={<Resources/>}></Route>
+                    {/* <Route path='/resources' element={<Resources/>}></Route> */}
                     <Route path="/about-us" element={<AboutUs/>}></Route>
                     <Route path='/projects' element={<Projects/>}></Route>
                     <Route path='/services' element={<Services/>}></Route>

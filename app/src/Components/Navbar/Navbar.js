@@ -47,9 +47,9 @@ export default function Navbar() {
                 <a href="/services">
                     <p>Services</p>
                 </a>
-                <a href="/resources">
+                {/* <a href="/resources">
                     <p>Resources</p>
-                </a>
+                </a> */}
             </div>
 
             <div className="absolute right-[1rem] top-[1.45rem] flex items-center space-x-4">

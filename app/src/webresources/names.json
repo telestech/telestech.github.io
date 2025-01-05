@@ -12,12 +12,12 @@
         },
         {
             "name": "Sama Says Website",
-            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "img": "/resources/Sama-Says-HD-logo.png",
             "desc": "Turn your entrepreneurial vision into reality with Sama Says, your gateway to expert guidance, refined strategies, and investment readiness. Navigate our seamless website to explore a step-by-step journey tailored to bring your business ideas to life."
         },
         {
             "name": "Sama Says App",
-            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "img": "/resources/Sama-Says-HD-logo.png",
             "desc": "Accelerate your entrepreneurial success with the Sama Says app, offering personalized mentorship, real-time resources, and networking opportunities at your fingertips. Transform ideas into impactful ventures, all from the convenience of your mobile device."
         },
         {
@@ -27,40 +27,40 @@
         },
         {
             "name": "Coming Soon!",
-            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "img": "/resources/just_the_T[1].png",
             "desc": ""
         }
     ],
     "serviceList": {
         "names": [
-            "Software Development",
-            "Web Development",
-            "Application Production",
-            "Data Analytics",
-            "Technical Consulting",
-            "Project Management"
+            "softwareDevelopment",
+            "webDevelopement",
+            "applicationProduction",
+            "dataAnalytics",
+            "technicalConsulting",
+            "projectManagement"
         ],
         "softwareDevelopment": {
             "name": "Software Development",
-            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "img": "/resources/240_F_230428577_QCXXNyzb1tMIzKVqd9LniPQ0m9ZNDTFU.jpg",
             "shortDesc": "We specialize in creating custom software solutions tailored to meet your unique business requirements.",
             "longDesc": "At Teles Technological Services LLP, we specialize in creating custom software solutions tailored to meet your unique business requirements. From concept to deployment, our team ensures seamless integration, robust functionality, and scalability, empowering your organization to adapt and thrive in an ever-evolving digital landscape."
         },
         "webDevelopement": {
             "name": "Web Development",
-            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "img": "/resources/240_F_125308904_L73S7SYQ59sBWS4m1sY4y3zXD6YxyrH9.jpg",
             "shortDesc": "Our web development services focus on building dynamic, responsive, and visually captivating websites that not only showcase your brand but also offer an exceptional user experience.",
             "longDesc": "Our web development services focus on building dynamic, responsive, and visually captivating websites that not only showcase your brand but also offer an exceptional user experience. Whether it's an e-commerce platform, a corporate site, or a custom web application, we ensure optimized performance and cutting-edge technology integration."
         },
         "applicationProduction": {
             "name": "Application Production",
-            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "img": "/resources/240_F_97904882_231rraFMSJbdnbSZspXMeiTp1OJqClJ5.jpg",
             "shortDesc": "From mobile apps to desktop solutions, we bring your ideas to life with innovative, user-friendly, and high-performance applications.",
             "longDesc": "From mobile apps to desktop solutions, we bring your ideas to life with innovative, user-friendly, and high-performance applications. Whether your goal is to enhance customer engagement or streamline internal processes, our team ensures a seamless and impactful app production experience."
         },
         "dataAnalytics": {
             "name": "Data Analytics",
-            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "img": "/resources/240_F_321999244_kLDfk7mlGQc2zpz1NM91IeTdQfjuKD0u.jpg",
             "shortDesc": "Leveraging modern tools and methodologies, we help businesses identify trends, make informed decisions, and gain a competitive edge.",
             "longDesc": "We transform raw data into valuable insights through advanced data analytics services. Leveraging modern tools and methodologies, we help businesses identify trends, make informed decisions, and gain a competitive edge. From building dashboards to implementing predictive models, we ensure data becomes your strongest asset."
         },
@@ -72,7 +72,7 @@
         },
         "projectManagement": {
             "name": "Project Management",
-            "img": "/resources/240_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg",
+            "img": "/resources/240_F_317327548_LpMWx7wY4QCVaqeydPyQzGZuXuZvhySs.jpg",
             "shortDesc": "We offer end-to-end project management services that guarantee the successful execution of your initiatives.",
             "longDesc": "We offer end-to-end project management services that guarantee the successful execution of your initiatives. With a focus on meticulous planning, resource allocation, risk mitigation, and timely delivery, we ensure your projects are completed within scope, on time, and to the highest standards of quality."
         }
@@ -116,6 +116,10 @@
         "title": "Our Services",
         "subtitle": "Tailored tech solutions to empower your business and drive innovation."
     },
+    "projects": {
+        "title": "Our Projects",
+        "subtitle": "We blend innovation and precision to craft seamless, future-ready solutions that transform ideas into impactful realities."
+    },
     "home": {
         "title": {
             "desc": "We build quality applications for businesses that scales like a dream"
@@ -151,6 +155,15 @@
         },
         "ourServices": {
             "desc": "We transfrom your development problems into seamless solutions with reliable results."
+        },
+        "ourProjects": {
+            "title": "Our Projects",
+            "subtitle": "We blend innovation and precision to craft seamless, future-ready solutions that transform ideas into impactful realities."
         }
+    },
+    "links": {
+        "linkedin": "https://www.linkedin.com/in/teles-technological-services-600258343/",
+        "github": "https://github.com/telestech",
+        "instagram": ""
     }
 }
