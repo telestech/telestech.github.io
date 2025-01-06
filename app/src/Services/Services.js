@@ -3,9 +3,13 @@ import Navbar from "../Components/Navbar/Navbar";
 import { useTheme } from "../Components/Theme/Theme";
 import data from "../webresources/names.json";
 import names from "../webresources/names.json";
+import { useEffect } from "react";
 
 export function Services() {
     const { isDarkMode } = useTheme();
+    useEffect(() => {
+        document.title = 'TelesTech - Our Services';
+    }, []);
 
     const servicedata = Object.values(data.serviceList).slice(1);
 

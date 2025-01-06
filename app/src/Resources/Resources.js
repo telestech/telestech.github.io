@@ -13,6 +13,10 @@ const blogList = [
 export default function Resources() {
     const { isDarkMode } = useTheme();
 
+    useEffect(() => {
+        document.title = 'TelesTech - Our Resources';
+    }, []);
+
     return (
         <div className={`${isDarkMode ? "bg-black" : "bg-white"} overflow-x-hidden`}>
             <Navbar />

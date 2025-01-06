@@ -6,6 +6,10 @@ import data from "../webresources/names.json";
 import { useMediaQuery } from 'react-responsive';
 
 export function AboutUs() {
+    useEffect(() => {
+        document.title = 'TelesTech - About Us';
+    }, []);
+
     return (
         <div className="bg-white overflow-x-hidden">
             <Navbar />

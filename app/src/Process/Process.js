@@ -1,6 +1,7 @@
 import Footer from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar/Navbar";
 import names from "../webresources/names.json";
+import { useEffect } from "react";
 import { useTheme } from "../Components/Theme/Theme";
 import { MyCodeBlock } from "../Components/MyCodeBlock/MyCodeBlock";
 import { SiKakaotalk } from "react-icons/si";
@@ -34,17 +35,21 @@ const logoYellow = '#debc6b';
 const logoDarkYellow = '#977f48';
 
 export function Process() {
-  return (
-    <div className="">
-        <Navbar />
-        <div className="h-20 bg-black"></div> {/* Padding for scrollbar */}
-        <TitleSection />
-        {/* <ISOSection /> */}
-        <SloganSection />
-        <TimelineSection />
-        <Footer />
-    </div>
-  );
+    useEffect(() => {
+        document.title = 'TelesTech - Our Process';
+    }, []);
+
+    return (
+        <div className="">
+            <Navbar />
+            <div className="h-20 bg-black"></div> {/* Padding for scrollbar */}
+            <TitleSection />
+            {/* <ISOSection /> */}
+            <SloganSection />
+            <TimelineSection />
+            <Footer />
+        </div>
+    );
 }
 
 function TitleSection() {

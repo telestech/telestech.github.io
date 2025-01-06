@@ -12,6 +12,10 @@ export default function Home() {
     const { isDarkMode } = useTheme();
 
     useEffect(() => {
+        document.title = 'TelesTech - Home';
+    }, []);
+
+    useEffect(() => {
         const handleResize = () => setWidth(window.innerWidth);
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
@@ -256,7 +260,7 @@ function ServicesSection() {
                         </p>
                     </div>
                     <div className="absolute bottom-[-30%] left-[15%] w-[70%] h-[60%] flex flex-row justify-center items-center">
-                        {names.serviceList.names.map((service) => ServiceSummaryPC(names.serviceList[service]))}
+                        {names.serviceList.names.map((service) => ServiceSummary(names.serviceList[service]))}
                     </div>
                     <div className={`absolute top-[5rem] left-[5%] w-[90%] h-[30%]
                                     *:absolute *:top-0 *:${ isDarkMode ? "text-white" : "text-black" } *:text-[3.5vmin] *:opacity-0 *:duration-200`}>
@@ -285,7 +289,7 @@ function ServicesSection() {
     );
 }
 
-function ServiceSummaryPC(service) {
+function ServiceSummary(service) {
     return (
         <a key={service.name} slogan={service.name} href="/" className="service-summary flex-none w-[50vmin] h-[60%] m-[-15vmin] duration-300 hover:translate-y-[-25vh]
                         flex justify-center items-center z-10 group">

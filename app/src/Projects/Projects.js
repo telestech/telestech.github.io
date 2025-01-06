@@ -9,6 +9,10 @@ export function Projects() {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
+        document.title = 'TelesTech - Our Projects';
+    }, []);
+
+    useEffect(() => {
         setProjects(names.projectList || []);
     }, []);
 
